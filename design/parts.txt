@@ -1,0 +1,47 @@
+Parts
+
+E Ink Display 
+£7.50 https://thepihut.com/products/eink-screen-2-13-250x122-display-only
+2.13" 23.71 x 48.55mm
+
+STM32L151RET6
+From JLCPBC $3.83
+LQFP64 10 x 10mm, 512Kb Flash, 80Kb RAM
+
+---------- Sensor Options ----------
+Bosch BME280 humidity, temperature and pressure sensor
+From JLCPCB $3.28
+LGA-8 2.5 x 2.5mm, I2C or SPI
+
+Bosch BME668 humidity, temperature, pressure and gas sensor
+From JLCPCB $9.74
+SMD-8P 3 x 3mm
+
+------------------------------------
+
+MCP73871T-2CCI_ML Load sharing and battery charging IC
+From JLCPCB $1.55
+QFN-20 4 x 4mm
+
+MAX17048G LiPo Fuel gauge
+From JLCPCB $1.14
+DFN-8 2 x 2mm
+
+--------- Battery Options ----------
+3.7V 420mAh LiPo Battery
+$6.95  https://www.adafruit.com/product/4236
+35 x 24 x 5.2mm
+
+Look up if JLCPCB has some LiPos
+------------------------------------
+
+---------- Memory Options ----------
+Zetta ZDSD32GLGEAG SDIO Memory
+From JLCPCB $5.08
+32 GBit (4GB), LGA-8 6.2 x 8mm
+
+Zetta ZDSD04GLGEAG SDIO Memory
+From JLCPCB $2.33
+4 GBit (512MB), LGA-8 6 x 8mm
+------------------------------------
+
