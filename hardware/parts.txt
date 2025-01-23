@@ -61,5 +61,7 @@ From JLCPCB $5.08
 Zetta ZDSD04GLGEAG SDIO Memory
 From JLCPCB $2.33
 4 GBit (512MB), LGA-8 6 x 8mm
+
+Or just put an SD card in
 ------------------------------------
 
