@@ -17,14 +17,9 @@ HAT for prototyping
 £15.80 https://thepihut.com/products/2-15-e-paper-hat-for-raspberry-pi-296-x160
 
 ------ Microcontroller Options ------
-
-STM32L151RET6
-From JLCPBC $3.83
-LQFP64 10 x 10mm, 512Kb Flash, 80Kb RAM
-
-STM32U535CEU6Q
-From JLCPCB $0.04 but OOS
-UFQFPN48 7 x 7mm, 512Kb flash, 274Kb RAM
+STM32L476RET6
+From JLCPCB $2.55 for 10+
+LQFP64 10 x 10mm, 512Kb flash, 128Kb RAM
 
 ---------- Sensor Options ----------
 Bosch BME280 humidity, temperature and pressure sensor

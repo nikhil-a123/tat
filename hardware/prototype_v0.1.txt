@@ -1,6 +1,5 @@
-Prototype board will be a Nucleo expansion board for NUCLEO-U545RE-Q
-Socket connectors for prototype board will be harvested from old breakout board
-No battery functionality for now, will be powered via USB
+Prototype board uses STM32L476RET6
+Powered via USB-C 
 
 Breakout will contain:
 40-pin header to connect to eInk display HAT https://thepihut.com/products/break-away-0-1-2x20-pin-strip-dual-male-header
