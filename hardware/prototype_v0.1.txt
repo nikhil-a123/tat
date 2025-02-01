@@ -1,12 +1,17 @@
 Prototype board uses STM32L476RET6
-Powered via USB-C 
+Form factor same as Raspberry Pi Zero W (65 x 30mm with 40-pin header)
+Powered via USB-C, no battery support for now
 
 Breakout will contain:
 40-pin header to connect to eInk display HAT https://thepihut.com/products/break-away-0-1-2x20-pin-strip-dual-male-header
 BME280 sensor
 3 push buttons for user
 UART connector
-LED to indicate run mode
+LEDs to indicate:
+    - Vbus from USB-C
+    - I2C activity
+    - SPI activity
+    - Heartbeat
 SD card slot
 
-https://www.aliexpress.com/item/1005003853804182.html
+JTAG cable for programming https://www.aliexpress.com/item/1005003853804182.html
