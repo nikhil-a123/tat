@@ -2,6 +2,9 @@ STM32U073CCU6 Microcontroller - Mouser £18.50 for 10+
 BQ25185 Linear battery charger with Power path - Mouser £10.40 for 10+
 MAX17048G+T10 - LCSC $8.43 for 10+
 TPS62826DMQR Buck Converter - LCSC $3.07 for 10+
+
+Focusing on temperature, pressure and humidity for now
+TMP117AIDRVT Temperature sensor - LCSC $10.57 for 10+
+BME280 Temp, pressure, humidity sensor - LCSC $24.66 for 10+
 Texas Instruments HDC3022DEJR Temperature and humidity sensor - LCSC $28.09 for 10+
-SCD41 Temperature, humidity and CO2 sensor - roughly $8ea from aliexpress
 Zetta ZD25Q128DWIGR 128MBit NOR Flash - LCSC $5.06 for 10+
