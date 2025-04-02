@@ -6,7 +6,7 @@ TPS62826DMQR Buck Converter - LCSC $3.07 for 10+
 Focusing on temperature, pressure and humidity for now
 TMP117AIDRVR Temperature sensor - LCSC $13.15  for 10+
 BME280 Temp, pressure, humidity sensor - LCSC $24.66 for 10+
-Texas Instruments HDC3022DEJR Temperature and humidity sensor - LCSC $28.09 for 10+
 Zetta ZD25Q128DWIGR 128MBit NOR Flash - LCSC $5.06 for 10+
+Zetta ZD24C02B-MAGMT 2KBit EEPROM - LCSC $0.43 for 10+
 XFCN PM254V-12-08-H85 Socket Header to solder into display
 XFCN PZ254V-12-8P Pin header to solder into PCB
