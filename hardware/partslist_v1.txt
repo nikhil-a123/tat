@@ -1,17 +1,29 @@
+--- MCU ---
 STM32U073CCU6 Microcontroller - Mouser £18.50 for 10+
 Seiko Epson Q13FC13500005 32.768KHz +- 10ppm LSE Crystal - LCSC $2.61 for 10+
+
+--- PWR ---
 BQ25185 Linear battery charger with Power path - Mouser £10.40 for 10+
 MAX17048G+T10 - LCSC $8.43 for 10+
 TPS62826DMQR Buck Converter - LCSC $3.07 for 10+
 G-Switch GT-USB-7010ASV USB-C 2.0 Socket - LCSC $0.77 for 10+
 XUNPU WAFER-PH2.0-2PWB JST-PH Right Angle SMT for battery - LCSC $0.45 for 10+
 
+--- EINK ---
 GoodDisplay GDEY0213B74 2.13in 250x122 B/W - AliExpress £4.35 for 1
 https://www.aliexpress.com/item/1005002526182716.html
 JUSHUO AFC07-S24ECA-00 0.5mm pitch 24 Contact FPC connector - LCSC $1.09 for 10+
 
-Focusing on temperature, pressure and humidity for now
+--- SENSOR ---
 STS40-AD1B-R3 Temperature sensor, ±0.2℃, address 0x44 - Mouser £3.79 for 10+
 SHT40-BD1F-R2 Humidity and temperature sensor, address 0x45 - Mouser £13.00 for 10+
+
+-- STORAGE ---
 Zetta ZD25Q128DWIGR 128MBit NOR Flash - LCSC $5.06 for 10+
 Zetta ZD24C02B-STGMT 2KBit EEPROM - LCSC $0.36 for 10+
+
+--- INFO ---
+WorldSemi WS2812C-2020-V1 Addressable RGB LED - LCSC $0.77 for 10+
+
+--- INPUT ---
+SHOU HAN TS24CA Right Angle tactile switch - LCSC $0.44 for 20+
