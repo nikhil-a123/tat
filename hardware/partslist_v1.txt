@@ -5,9 +5,18 @@ Seiko Epson Q13FC13500005 32.768KHz +- 10ppm LSE Crystal - LCSC $2.61 for 10+
 --- PWR ---
 BQ25185 Linear battery charger with Power path - Mouser £10.40 for 10+
 MAX17048G+T10 - LCSC $8.43 for 10+
-TPS62826DMQR Buck Converter - LCSC $3.07 for 10+
 G-Switch GT-USB-7010ASV USB-C 2.0 Socket - LCSC $0.77 for 10+
 XUNPU WAFER-PH2.0-2PWB JST-PH Right Angle SMT for battery - LCSC $0.45 for 10+
+
+// TPS62826DMQR Buck Converter - LCSC $3.07 for 10+
+
+Texas Instruments TPS63802DLAR Buck Boost converter - LCSC $4.69 for 10+ (1921 in stock)
+3x2mm VSON-HR
+11-μA operating quiescent current
+
+// TPS631000 Buck Boost converter - LCSC $4.67 for 10+ (197 in stock)
+
+// Texas Instruments TPS63051RMWR Buck Boost converter - LCSC $7.20 for 10+ (262 in stock)
 
 --- EINK ---
 GoodDisplay GDEY0213B74 2.13in 250x122 B/W - AliExpress £4.35 for 1
@@ -20,10 +29,14 @@ SHT40-BD1F-R2 Humidity and temperature sensor, address 0x45 - Mouser £13.00 for
 
 -- STORAGE ---
 Zetta ZD25Q128DWIGR 128MBit NOR Flash - LCSC $5.06 for 10+
-Zetta ZD24C02B-STGMT 2KBit EEPROM - LCSC $0.36 for 10+
+BL(Shanghai Belling) BL24C08F-NTRC 2x3mm UDFN-8 8Kbit EEPROM - LCSC $0.74 for 10+
 
 --- INFO ---
-WorldSemi WS2812C-2020-V1 Addressable RGB LED - LCSC $0.77 for 10+
+NEED TO DETERMINE RED GREEN BLUE LEDS!
+
+--- DEBUG ---
+JST SM07B-SRSS-TB(LF)(SN) 7 Pin JST-SH SMD Header - LCSC $3.43 for 10+
 
 --- INPUT ---
 SHOU HAN TS24CA Right Angle tactile switch - LCSC $0.44 for 20+
+Nexperia 74HC14BQ,115 Hex inverting Schmitt Trigger - LCSC $1.76 for 10+
