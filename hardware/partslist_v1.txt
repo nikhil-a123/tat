@@ -7,6 +7,7 @@ BQ25185 Linear battery charger with Power path - Mouser £10.40 for 10+
 MAX17048G+T10 - LCSC $8.43 for 10+
 G-Switch GT-USB-7010ASV USB-C 2.0 Socket - LCSC $0.77 for 10+
 XUNPU WAFER-PH2.0-2PWB JST-PH Right Angle SMT for battery - LCSC $0.45 for 10+
+Nexperia PRTR5V0U2F,115 Low Capacitance ESD Diode for USB - LCSC $2.86 for 10+
 
 // TPS62826DMQR Buck Converter - LCSC $3.07 for 10+
 
