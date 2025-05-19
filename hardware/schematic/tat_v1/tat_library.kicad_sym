@@ -185,7 +185,7 @@
 			)
 		)
 		(property "Value" "BQ25185"
-			(at 8.128 -16.764 0)
+			(at 9.144 -12.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)

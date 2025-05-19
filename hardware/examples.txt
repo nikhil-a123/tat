@@ -1,0 +1,3 @@
+NPM1300 devices
+https://github.com/ZSWatch/ZSWatch/tree/main
+https://github.com/Protocentral/healthypi-move-fw

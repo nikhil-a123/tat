@@ -16,6 +16,14 @@ Texas Instruments TPS63802DLAR Buck Boost converter - LCSC $5.73 for 10+ (6681 i
 See TI Application Brief SLVAE79 - Prevent Battery Overdischarge with Precise Threshold Enable Pin
 for shutting down at a certain input voltage from BQ25185
 
+OR
+
+Nordic nPM1300 PMIC 2 Buck + Charger IC - Digikey $16.80 for 10+
+
+OR 
+
+X-Powers Tech AXP2101 - LCSC $12.75 for 10+
+
 --- EINK ---
 GoodDisplay GDEY0213B74 2.13in 250x122 B/W - AliExpress £4.35 for 1
 https://www.aliexpress.com/item/1005002526182716.html
@@ -35,7 +43,14 @@ Zetta ZD25Q128DWIGR 128MBit NOR Flash - LCSC $5.06 for 10+
 BL(Shanghai Belling) BL24C08F-NTRC 2x3mm UDFN-8 8Kbit EEPROM - LCSC $0.74 for 10+
 
 --- INFO ---
-NEED TO DETERMINE RED GREEN BLUE LEDS!
+XINGLIGHT XL-1608SURC-06 Red 2.0V 0603 LED - LCSC $0.32 for 100
+Foshan NationStar Optoelectronics NCD0603G1 Green 2.6V 0603 LED - LCSC $0.31 for 20
+XINGLIGHT XL-1608UBC-04 Blue 3V 0603 LED - LCSC $0.35 for 100
+Foshan NationStar Optoelectronics NCD0603W1 White 2.6V 0603 LED - LCSC $0.29 for 20
+
+Imax = 1mA
+Vdd = 3.3V
+
 
 --- DEBUG ---
 JST SM07B-SRSS-TB(LF)(SN) 7 Pin JST-SH SMD Header - LCSC $3.43 for 10+
