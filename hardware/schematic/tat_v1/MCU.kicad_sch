@@ -3592,12 +3592,24 @@
 		(uuid "ce632830-5343-4190-b9bc-3bd57a670753")
 	)
 	(no_connect
+		(at 138.43 123.19)
+		(uuid "079bc997-ca6c-46f0-8b0b-517d604e6eab")
+	)
+	(no_connect
 		(at 138.43 69.85)
 		(uuid "16588704-a61a-4b28-9673-d6c544804f8d")
 	)
 	(no_connect
+		(at 138.43 120.65)
+		(uuid "1cbb38b8-b38f-4557-bc8b-13c94272315d")
+	)
+	(no_connect
 		(at 138.43 67.31)
 		(uuid "20c808f8-c2dc-4b94-b183-80393e293245")
+	)
+	(no_connect
+		(at 138.43 125.73)
+		(uuid "31e93750-0691-4a63-ba15-1d48749c960c")
 	)
 	(no_connect
 		(at 168.91 69.85)
@@ -3608,12 +3620,24 @@
 		(uuid "936ba4ff-6886-4ab8-8815-c126b8f3d2ec")
 	)
 	(no_connect
+		(at 168.91 90.17)
+		(uuid "977f6464-6236-4b7d-be09-d87e15d14eaf")
+	)
+	(no_connect
 		(at 168.91 87.63)
 		(uuid "9fc2326a-f3d3-4300-b1cd-d3c1564e81f5")
 	)
 	(no_connect
+		(at 168.91 92.71)
+		(uuid "a3d8bbce-2a8c-4182-b01e-7b90402d84ee")
+	)
+	(no_connect
 		(at 168.91 67.31)
 		(uuid "aa4c7ec7-418a-4588-8840-79d03367bd46")
+	)
+	(no_connect
+		(at 138.43 128.27)
+		(uuid "aecb9719-01e2-4efc-bb19-8da16e2c2c71")
 	)
 	(wire
 		(pts
@@ -4652,28 +4676,6 @@
 			)
 		)
 	)
-	(global_label "FLASH_NSS"
-		(shape input)
-		(at 138.43 120.65 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4ff13f5a-572b-46c3-9d87-6dc9890bca23")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.9824 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "OSC32_OUT"
 		(shape input)
 		(at 138.43 85.09 180)
@@ -4807,28 +4809,6 @@
 			)
 		)
 	)
-	(global_label "GAUGE_SDA"
-		(shape input)
-		(at 168.91 92.71 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "777f0e9c-d457-44f3-8d8b-5024fc26745f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 182.539 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BTN_LEFT"
 		(shape input)
 		(at 138.43 80.01 180)
@@ -4842,50 +4822,6 @@
 		(uuid "79d6c1a7-85bd-4504-a5da-06e6c82045ce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 126.6758 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GAUGE_SCL"
-		(shape input)
-		(at 168.91 90.17 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7a4e1492-ee30-4a56-89e0-f1d2b94ca8bf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 182.4785 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "FLASH_SCK"
-		(shape input)
-		(at 138.43 123.19 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7d79edd3-2b7a-4438-bdd7-339e3091b3a4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.9824 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4962,28 +4898,6 @@
 			)
 		)
 	)
-	(global_label "FLASH_MOSI"
-		(shape input)
-		(at 138.43 128.27 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "965dd319-b787-4f39-89cf-55320dd2b18d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.1357 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "LPUART_RX"
 		(shape input)
 		(at 138.43 107.95 180)
@@ -5024,28 +4938,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "FLASH_MISO"
-		(shape input)
-		(at 138.43 125.73 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "97f65cea-6dfc-4bb9-8731-153d0f5b2a51")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.1357 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)

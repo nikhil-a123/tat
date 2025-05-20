@@ -9,8 +9,162 @@
 		(rev "v1.0")
 	)
 	(lib_symbols)
+	(hierarchical_label "Sensor SCL"
+		(shape output)
+		(at 123.19 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1760f404-41cd-49fc-ad0c-81496d3a8a61")
+	)
+	(hierarchical_label "EEPROM SCL"
+		(shape input)
+		(at 82.55 129.54 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3958fd3b-414f-4a30-8b32-133a80368f37")
+	)
+	(hierarchical_label "Left Button"
+		(shape output)
+		(at 82.55 146.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "395db4e1-7e23-48a7-888d-125f2c366940")
+	)
+	(hierarchical_label "Center Button"
+		(shape input)
+		(at 123.19 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "73b13450-961d-44f2-a3ce-b96bbbc64151")
+	)
+	(hierarchical_label "Sensor SCL"
+		(shape input)
+		(at 82.55 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "752258cb-c257-4428-8566-d4d95745d7e0")
+	)
+	(hierarchical_label "EEPROM SCL"
+		(shape output)
+		(at 123.19 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7910c016-ed07-45fe-ac7d-976cad6771fd")
+	)
+	(hierarchical_label "EEPROM SDA"
+		(shape bidirectional)
+		(at 123.19 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "828a6560-c67e-4131-9ce5-4a4e8296da15")
+	)
+	(hierarchical_label "Right Button"
+		(shape input)
+		(at 123.19 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a6a184d9-6569-4492-9bae-fc0c9dbb2b3d")
+	)
+	(hierarchical_label "Sensor SDA"
+		(shape bidirectional)
+		(at 123.19 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b13b8be2-6b0d-4dbe-b83c-b4dee5e368de")
+	)
+	(hierarchical_label "EEPROM SDA"
+		(shape bidirectional)
+		(at 82.55 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b62b17f9-88c2-4b84-8830-52f2a84125cf")
+	)
+	(hierarchical_label "Left Button"
+		(shape input)
+		(at 123.19 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b9e15310-359c-4c72-ab8c-d735cc3b4c57")
+	)
+	(hierarchical_label "Right Button"
+		(shape output)
+		(at 82.55 151.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d5b1ca4e-9d5d-44db-9427-fdd1d3e3a694")
+	)
+	(hierarchical_label "Sensor SDA"
+		(shape bidirectional)
+		(at 82.55 137.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dd683ebd-ed43-493e-b30b-87ff4850b416")
+	)
+	(hierarchical_label "Center Button"
+		(shape output)
+		(at 82.55 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ef01c9d6-eabf-4b15-af19-642d0f4a58c3")
+	)
 	(sheet
-		(at 20.32 111.76)
+		(at 33.02 69.85)
 		(size 49.53 34.29)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -26,7 +180,7 @@
 		)
 		(uuid "5056535a-bc75-42d4-a05e-c6bbb85e2678")
 		(property "Sheetname" "Power"
-			(at 20.32 111.0484 0)
+			(at 33.02 69.1384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35,7 +189,7 @@
 			)
 		)
 		(property "Sheetfile" "untitled.kicad_sch"
-			(at 20.32 146.6346 0)
+			(at 33.02 104.7246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52,8 +206,8 @@
 		)
 	)
 	(sheet
-		(at 15.24 158.75)
-		(size 49.53 36.83)
+		(at 123.19 95.25)
+		(size 33.02 59.69)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -68,7 +222,7 @@
 		)
 		(uuid "61278459-0872-433c-8091-dd4d841ee895")
 		(property "Sheetname" "MCU"
-			(at 15.24 158.0384 0)
+			(at 123.19 94.5384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -77,7 +231,7 @@
 			)
 		)
 		(property "Sheetfile" "MCU.kicad_sch"
-			(at 15.24 196.1646 0)
+			(at 123.19 155.5246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -95,8 +249,8 @@
 		)
 	)
 	(sheet
-		(at 71.12 158.75)
-		(size 49.53 35.56)
+		(at 33.02 121.92)
+		(size 49.53 34.29)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -111,7 +265,7 @@
 		)
 		(uuid "c7fedf3e-0076-4d27-8f18-2fdc24044d55")
 		(property "Sheetname" "Peripherals and user input"
-			(at 71.12 158.0384 0)
+			(at 33.02 121.2084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -120,7 +274,7 @@
 			)
 		)
 		(property "Sheetfile" "peripherals.kicad_sch"
-			(at 71.12 194.8946 0)
+			(at 33.02 156.7946 0)
 			(effects
 				(font
 					(size 1.27 1.27)
