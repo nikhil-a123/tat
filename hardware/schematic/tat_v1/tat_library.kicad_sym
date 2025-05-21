@@ -234,14 +234,14 @@
 			(pin power_in line
 				(at -11.43 7.62 0)
 				(length 2.54)
-				(name "IN"
+				(name "BAT"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "10"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -252,14 +252,14 @@
 			(pin power_in line
 				(at -11.43 5.08 0)
 				(length 2.54)
-				(name "BAT"
+				(name "IN"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "2"
+				(number "10"
 					(effects
 						(font
 							(size 1.27 1.27)
