@@ -21,9 +21,9 @@ Littelfuse 0805L020YR LCSC $1.59 for 10+
 
 UMW(Youtai Semiconductor Co., Ltd.) USBLC6-2P6(UMW) ESD Diode for USB - LCSC $0.51 for 10+
 TECH PUBLIC ESDA7P60-1U1M ESD diode for USB Vbus - LCSC $0.51 for 10+
-BNstar SMD0603-035C-6V resettable fuse, 6V 750mA trip current - LCSC $0.39 for 10+
 XUNPU WAFER-PH2.0-2PWB JST-PH Right Angle SMT for battery - LCSC $0.45 for 10+
 Nexperia PRTR5V0U2F,115 Low Capacitance ESD Diode for USB - LCSC $2.86 for 10+
+Look at AXP2585 for a later revision maybe?
 
 --- EINK ---
 GoodDisplay GDEY0213B74 2.13in 250x122 B/W - AliExpress £4.35 for 1
