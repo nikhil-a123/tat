@@ -626,6 +626,10 @@
     [
       "c7fedf3e-0076-4d27-8f18-2fdc24044d55",
       "Peripherals and user input"
+    ],
+    [
+      "3e709284-5543-4534-bf58-110f53ad5a3b",
+      "Display"
     ]
   ],
   "text_variables": {}

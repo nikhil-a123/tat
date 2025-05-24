@@ -4,11 +4,13 @@ Seiko Epson Q13FC13500005 32.768KHz +- 10ppm LSE Crystal - LCSC $2.61 for 10+
 
 --- PWR ---
 BQ25185 Linear battery charger with Power path - Mouser £10.40 for 10+
-Texas Instruments TPS631000DRLR Buck-boost converter - LCSC $ 5.40 for 10+
+Texas Instruments TPS631000DRLR Buck-boost converter - LCSC $5.40 for 10+
+Texas Instruments BQ27220YZFR battery fuel gauge - LCSC $4.87 for 10+
 
 Korean Hroparts Elec TYPE-C-31-M-12 USB-C 2.0 Socket - LCSC $1.72 for 10+
 STMicroelectronics USBLC6-2P6 Combined USB data and VBus ESD diode - LCSC $1.96 for 10+
 Murata Electronics BLM18PG221SN1D ferrite bead - LCSC $0.81 for 100+
+MCC(Micro Commercial Components) SIL2308-TP dual N and P MOSFET used in PXRD - LCSC $0.78
 PXRD uses BLM21SP181SH1D ferrite
 
 Polyfuse specs:
@@ -29,8 +31,18 @@ Look at AXP2585 for a later revision maybe?
 GoodDisplay GDEY0213B74 2.13in 250x122 B/W - AliExpress £4.35 for 1
 https://www.aliexpress.com/item/1005002526182716.html
 
-JUSHUO AFC07-S24ECA-00 0.5mm pitch 24 Contact FPC connector - LCSC $1.09 for 10+'
+JUSHUO AFC07-S24ECA-00 0.5mm pitch 24 Contact FPC connector - LCSC $1.09 for 10+
+
+Need N-Channel MOSFET with Vds breakdown voltage >= 30V, Vgs(threshold) < 1.5V, Rds(on) <= 400mOhm
+WeAct uses AO3402, example uses SI1308EDL
 Vishay Intertech SI1308EDL-T1-GE3 MOSFET - LCSC $1.25 for 10+
+
+Need Schottky diode with  Reverse DC voltage >= 30V, Io >= 500mA, forwards voltage <= 430mV
+WeAct uses B5819W SL, example uses MBR0530
+
+Use AO3402 and B5819W SL
+Alpha & Omega Semicon AO3402 N-Channel MOSFET - LCSC $0.82 for 10+
+Jiangsu Changjing Electronics Technology Co., Ltd. B5819W SL Schottky Diode - LCSC $0.45 for 20+
 
 --- SENSOR ---
 STS40-AD1B-R3 Temperature sensor, ±0.2℃, address 0x44 - Mouser £3.79 for 10+
