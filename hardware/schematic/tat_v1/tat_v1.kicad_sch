@@ -55,7 +55,7 @@
 	)
 	(hierarchical_label "STAT2"
 		(shape output)
-		(at 113.03 113.03 180)
+		(at 113.03 115.57 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -121,7 +121,7 @@
 	)
 	(hierarchical_label "STAT1"
 		(shape output)
-		(at 113.03 110.49 180)
+		(at 113.03 113.03 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -185,6 +185,17 @@
 		)
 		(uuid "7910c016-ed07-45fe-ac7d-976cad6771fd")
 	)
+	(hierarchical_label "BATT Sense"
+		(shape input)
+		(at 123.19 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "792956bd-7a60-4d16-934e-97bf0d98b882")
+	)
 	(hierarchical_label "EEPROM SDA"
 		(shape bidirectional)
 		(at 123.19 130.81 0)
@@ -195,6 +206,18 @@
 			(justify left)
 		)
 		(uuid "828a6560-c67e-4131-9ce5-4a4e8296da15")
+	)
+	(hierarchical_label "BATT Sense"
+		(shape output)
+		(at 113.03 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify right)
+		)
+		(uuid "862d582d-7be6-477e-bd32-46ff0b5d5718")
 	)
 	(hierarchical_label "USB_D+"
 		(shape bidirectional)
@@ -220,7 +243,7 @@
 	)
 	(hierarchical_label "STAT1"
 		(shape input)
-		(at 123.19 110.49 0)
+		(at 123.19 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -275,7 +298,7 @@
 	)
 	(hierarchical_label "STAT2"
 		(shape input)
-		(at 123.19 113.03 0)
+		(at 123.19 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -319,7 +342,7 @@
 	)
 	(hierarchical_label "USB Sense"
 		(shape output)
-		(at 113.03 105.41 180)
+		(at 113.03 109.22 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -396,7 +419,7 @@
 	)
 	(hierarchical_label "USB Sense"
 		(shape input)
-		(at 123.19 105.41 0)
+		(at 123.19 109.22 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -449,7 +472,7 @@
 	)
 	(sheet
 		(at 87.63 96.52)
-		(size 25.4 20.32)
+		(size 25.4 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -473,7 +496,7 @@
 			)
 		)
 		(property "Sheetfile" "untitled.kicad_sch"
-			(at 87.63 117.4246 0)
+			(at 87.63 119.9646 0)
 			(effects
 				(font
 					(size 1.27 1.27)

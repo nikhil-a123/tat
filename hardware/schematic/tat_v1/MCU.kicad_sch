@@ -3623,10 +3623,6 @@
 		(at 168.91 92.71)
 		(uuid "a3d8bbce-2a8c-4182-b01e-7b90402d84ee")
 	)
-	(no_connect
-		(at 168.91 67.31)
-		(uuid "aa4c7ec7-418a-4588-8840-79d03367bd46")
-	)
 	(wire
 		(pts
 			(xy 50.8 93.98) (xy 53.34 93.98)
@@ -4981,6 +4977,17 @@
 			(justify right)
 		)
 		(uuid "a6dd8a63-149a-43fb-a14b-b1b6a6d67acb")
+	)
+	(hierarchical_label "BATT Sense"
+		(shape input)
+		(at 168.91 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "aa839c6d-295c-4a86-bf81-c3150024271d")
 	)
 	(hierarchical_label "Left Button"
 		(shape input)
