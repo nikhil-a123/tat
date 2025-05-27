@@ -70,3 +70,6 @@ JST SM07B-SRSS-TB(LF)(SN) 7 Pin JST-SH SMD Header - LCSC $3.43 for 10+
 SHOU HAN TS24CA Right Angle tactile switch - LCSC $0.44 for 20+
 
 https://github.com/ebastler/zmk-designguide?tab=readme-ov-file#Schematics-and-design-considerations
+
+See for improved ADC readings
+https://en.ovcharov.me/2020/02/29/how-to-measure-battery-level-with-esp32-microcontroller/
