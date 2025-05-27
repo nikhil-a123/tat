@@ -5013,7 +5013,7 @@
 		(uuid "8a30d40e-bc0d-48cd-ab7b-7a6dc049999c")
 	)
 	(hierarchical_label "EInk SDA"
-		(shape input)
+		(shape bidirectional)
 		(at 168.91 85.09 0)
 		(effects
 			(font
@@ -5035,7 +5035,7 @@
 		(uuid "944d82ea-e4da-4b18-a617-bfa28ff5f6f9")
 	)
 	(hierarchical_label "EEPROM SDA"
-		(shape bidirectional)
+		(shape output)
 		(at 138.43 118.11 180)
 		(effects
 			(font

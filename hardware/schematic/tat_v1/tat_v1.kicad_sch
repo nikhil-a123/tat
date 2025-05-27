@@ -11,103 +11,13 @@
 	(lib_symbols)
 	(wire
 		(pts
-			(xy 116.84 113.03) (xy 127 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "243bdc80-405c-486c-a2e5-0c12f8536d3a")
-	)
-	(wire
-		(pts
-			(xy 160.02 99.06) (xy 171.45 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36334290-3d3d-4a9a-b043-f9a6f18b4436")
-	)
-	(wire
-		(pts
-			(xy 160.02 106.68) (xy 171.45 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37677a97-d021-4af4-9571-e5ce0e7e00fc")
-	)
-	(wire
-		(pts
-			(xy 116.84 88.9) (xy 127 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "589cd4b7-1717-4245-be28-019cdc931b48")
-	)
-	(wire
-		(pts
-			(xy 116.84 119.38) (xy 127 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59ef3f61-0356-4f61-80f6-e600cfa4ef08")
-	)
-	(wire
-		(pts
-			(xy 160.02 104.14) (xy 171.45 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61ce09e1-d634-4332-ad4d-4ea12e8fc73d")
-	)
-	(wire
-		(pts
 			(xy 116.84 78.74) (xy 127 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "780cead8-be0a-4382-ab90-676837d175b2")
-	)
-	(wire
-		(pts
-			(xy 116.84 106.68) (xy 127 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7853d4d2-17b8-4182-a34e-4020f0221435")
-	)
-	(wire
-		(pts
-			(xy 116.84 121.92) (xy 127 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91f5342e-d18d-4659-9499-bbfb72d5c6ee")
-	)
-	(wire
-		(pts
-			(xy 116.84 124.46) (xy 127 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97450ce7-f62a-4db5-a0ac-7f73b05c1584")
+		(uuid "016411a5-e0a3-4ee5-acfb-ea4164b91220")
 	)
 	(wire
 		(pts
@@ -117,67 +27,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9dce9bd7-e522-4392-98d9-bc23debd1479")
-	)
-	(wire
-		(pts
-			(xy 116.84 82.55) (xy 127 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2ac192e-0e34-4b6e-9472-108b7d366dbb")
-	)
-	(wire
-		(pts
-			(xy 160.02 96.52) (xy 171.45 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af2632ea-55e1-45f3-a204-44f9e0644058")
-	)
-	(wire
-		(pts
-			(xy 116.84 85.09) (xy 127 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfe9be61-a7f9-484a-b883-141e64bb9061")
-	)
-	(wire
-		(pts
-			(xy 160.02 93.98) (xy 171.45 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c33f0b55-0d1e-4114-84fe-66dbb21a6ae1")
-	)
-	(wire
-		(pts
-			(xy 116.84 115.57) (xy 127 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7446beb-6ea7-41ab-a110-5b79abe9dd06")
-	)
-	(wire
-		(pts
-			(xy 116.84 91.44) (xy 127 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da609179-8a33-44f8-99f4-e258da88e906")
+		(uuid "11d19141-6949-4f39-b0f9-f2ab47521341")
 	)
 	(wire
 		(pts
@@ -187,7 +37,77 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "dc468e94-a88c-4214-ae31-6d1d84e09d1f")
+		(uuid "1b7f6d3f-fda1-44f4-b8c7-2e77e78701db")
+	)
+	(wire
+		(pts
+			(xy 116.84 119.38) (xy 127 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21345437-0aa9-4ffa-9730-a730afbdd4a8")
+	)
+	(wire
+		(pts
+			(xy 116.84 85.09) (xy 127 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3261f41c-dbfa-425c-b468-8a46f80aad75")
+	)
+	(wire
+		(pts
+			(xy 116.84 82.55) (xy 127 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34b30ff2-36b9-4c8b-aca5-ba3c878f8680")
+	)
+	(wire
+		(pts
+			(xy 116.84 113.03) (xy 127 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47665588-660f-4152-9205-7cded311285e")
+	)
+	(wire
+		(pts
+			(xy 116.84 91.44) (xy 127 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4776628e-e2cb-473b-839d-6015ae40ad88")
+	)
+	(wire
+		(pts
+			(xy 160.02 96.52) (xy 171.45 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48e18e0c-65cb-4039-8ac6-00a71b130778")
+	)
+	(wire
+		(pts
+			(xy 116.84 88.9) (xy 127 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5efe124b-9c51-4e73-a5c9-0c88dd9f4412")
 	)
 	(wire
 		(pts
@@ -197,426 +117,87 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f3cd546b-99a5-498a-922a-67e5680ddae5")
+		(uuid "70110df3-38f8-4f32-81cb-75e3713bba84")
 	)
-	(hierarchical_label "~{EInk Reset}"
-		(shape input)
-		(at 171.45 106.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 160.02 104.14) (xy 171.45 104.14)
 		)
-		(uuid "0f059349-02d4-4003-92db-84cd323e8252")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77a175c8-4c4a-42d7-89b9-388b1ec12f5d")
 	)
-	(hierarchical_label "Sensor SCL"
-		(shape output)
-		(at 127 115.57 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 160.02 106.68) (xy 171.45 106.68)
 		)
-		(uuid "1760f404-41cd-49fc-ad0c-81496d3a8a61")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89d7f325-e0a4-4668-ba5f-756c68eb663e")
 	)
-	(hierarchical_label "EInk Busy"
-		(shape input)
-		(at 160.02 104.14 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
+	(wire
+		(pts
+			(xy 116.84 124.46) (xy 127 124.46)
 		)
-		(uuid "1da2bfa5-0922-49cf-abfb-0cb936cdaacf")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acfe5654-0bcf-444f-84c7-10dce43eede8")
 	)
-	(hierarchical_label "~{EInk SS}"
-		(shape output)
-		(at 160.02 101.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
+	(wire
+		(pts
+			(xy 116.84 115.57) (xy 127 115.57)
 		)
-		(uuid "1e1115b6-a107-4a77-b0c3-679a3a0a5ee4")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad66bf15-fa23-4e4c-92be-c7b723d5e30f")
 	)
-	(hierarchical_label "STAT2"
-		(shape output)
-		(at 116.84 91.44 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
+	(wire
+		(pts
+			(xy 160.02 99.06) (xy 171.45 99.06)
 		)
-		(uuid "217ae1f4-6729-43ce-877f-02d5fcee21c3")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5ac16e7-74f9-486a-b302-e97c6efb8b80")
 	)
-	(hierarchical_label "EInk SCL"
-		(shape output)
-		(at 160.02 96.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
+	(wire
+		(pts
+			(xy 160.02 93.98) (xy 171.45 93.98)
 		)
-		(uuid "2b8b1511-46da-46f7-af79-66df8374ff82")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba348a94-904b-4ae7-865f-49ffe97cf223")
 	)
-	(hierarchical_label "EEPROM SCL"
-		(shape input)
-		(at 116.84 109.22 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
+	(wire
+		(pts
+			(xy 116.84 121.92) (xy 127 121.92)
 		)
-		(uuid "3958fd3b-414f-4a30-8b32-133a80368f37")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2b9c9f6-db3c-4fed-be6d-ce57ddf6c80b")
 	)
-	(hierarchical_label "Left Button"
-		(shape output)
-		(at 116.84 119.38 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
+	(wire
+		(pts
+			(xy 116.84 106.68) (xy 127 106.68)
 		)
-		(uuid "395db4e1-7e23-48a7-888d-125f2c366940")
-	)
-	(hierarchical_label "USB_D-"
-		(shape bidirectional)
-		(at 127 76.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(uuid "5288cda7-80c2-4c97-8a1d-58d13d34daf3")
-	)
-	(hierarchical_label "~{EInk Reset}"
-		(shape output)
-		(at 160.02 106.68 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6251c77b-a15e-4a9c-a1ab-fd6692361568")
-	)
-	(hierarchical_label "STAT1"
-		(shape output)
-		(at 116.84 88.9 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "70e4e3eb-c393-4b68-8404-13293a843e42")
-	)
-	(hierarchical_label "EInk SCL"
-		(shape input)
-		(at 171.45 96.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "72fdafd2-ceb5-4c98-ae6d-9d4cd583f140")
-	)
-	(hierarchical_label "Center Button"
-		(shape input)
-		(at 127 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "73b13450-961d-44f2-a3ce-b96bbbc64151")
-	)
-	(hierarchical_label "USB_D+"
-		(shape bidirectional)
-		(at 127 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "740f7f9a-0d98-47fe-a3ea-d229461d16c5")
-	)
-	(hierarchical_label "Sensor SCL"
-		(shape input)
-		(at 116.84 115.57 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "752258cb-c257-4428-8566-d4d95745d7e0")
-	)
-	(hierarchical_label "EEPROM SCL"
-		(shape output)
-		(at 127 109.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7910c016-ed07-45fe-ac7d-976cad6771fd")
-	)
-	(hierarchical_label "BATT Sense"
-		(shape input)
-		(at 127 82.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "792956bd-7a60-4d16-934e-97bf0d98b882")
-	)
-	(hierarchical_label "EEPROM SDA"
-		(shape bidirectional)
-		(at 127 106.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "828a6560-c67e-4131-9ce5-4a4e8296da15")
-	)
-	(hierarchical_label "BATT Sense"
-		(shape output)
-		(at 116.84 82.55 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify right)
-		)
-		(uuid "862d582d-7be6-477e-bd32-46ff0b5d5718")
-	)
-	(hierarchical_label "USB_D+"
-		(shape bidirectional)
-		(at 116.84 78.74 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8a9f34ce-e404-4f47-8486-f66aea9bb24d")
-	)
-	(hierarchical_label "EInk DC"
-		(shape output)
-		(at 160.02 99.06 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "925bf361-7654-4369-a731-0bf809483d0c")
-	)
-	(hierarchical_label "STAT1"
-		(shape input)
-		(at 127 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9fc9e3ba-3bda-44e2-9baf-9d3878c4d795")
-	)
-	(hierarchical_label "EInk DC"
-		(shape input)
-		(at 171.45 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a1f59079-68b6-4fba-90d0-7de7db2afe60")
-	)
-	(hierarchical_label "Right Button"
-		(shape input)
-		(at 127 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a6a184d9-6569-4492-9bae-fc0c9dbb2b3d")
-	)
-	(hierarchical_label "~{EInk SS}"
-		(shape input)
-		(at 171.45 101.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ae65ed38-f624-40f4-89e0-0e992ba01726")
-	)
-	(hierarchical_label "Sensor SDA"
-		(shape bidirectional)
-		(at 127 113.03 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b13b8be2-6b0d-4dbe-b83c-b4dee5e368de")
-	)
-	(hierarchical_label "STAT2"
-		(shape input)
-		(at 127 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b5ad8e5a-4d97-4ea2-8afc-b1b532bbc9f4")
-	)
-	(hierarchical_label "EEPROM SDA"
-		(shape bidirectional)
-		(at 116.84 106.68 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b62b17f9-88c2-4b84-8830-52f2a84125cf")
-	)
-	(hierarchical_label "Left Button"
-		(shape input)
-		(at 127 119.38 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b9e15310-359c-4c72-ab8c-d735cc3b4c57")
-	)
-	(hierarchical_label "USB_D-"
-		(shape bidirectional)
-		(at 116.84 76.2 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "bca98630-a8fc-49ef-bd0a-bcc4c3f71324")
-	)
-	(hierarchical_label "USB Sense"
-		(shape output)
-		(at 116.84 85.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "bcc92aee-508e-42bb-acf7-6a15f837bf3f")
-	)
-	(hierarchical_label "EInk SDA"
-		(shape bidirectional)
-		(at 160.02 93.98 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c4a669ff-e8f1-422a-a394-c67f0a29f07c")
-	)
-	(hierarchical_label "Right Button"
-		(shape output)
-		(at 116.84 124.46 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d5b1ca4e-9d5d-44db-9427-fdd1d3e3a694")
-	)
-	(hierarchical_label "Sensor SDA"
-		(shape bidirectional)
-		(at 116.84 113.03 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "dd683ebd-ed43-493e-b30b-87ff4850b416")
-	)
-	(hierarchical_label "EInk SDA"
-		(shape bidirectional)
-		(at 171.45 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e31c9ec3-6e93-4515-a7cb-2ef3cb6ab718")
-	)
-	(hierarchical_label "EInk Busy"
-		(shape output)
-		(at 171.45 104.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e334d5fc-2fdb-48db-a45e-269c96f34aee")
-	)
-	(hierarchical_label "Center Button"
-		(shape output)
-		(at 116.84 121.92 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ef01c9d6-eabf-4b15-af19-642d0f4a58c3")
-	)
-	(hierarchical_label "USB Sense"
-		(shape input)
-		(at 127 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f16bd530-03c2-41ea-9003-d07c25e5de2a")
+		(uuid "dd522820-7e61-45e7-9be8-cb75d6426e1f")
 	)
 	(sheet
 		(at 171.45 88.9)
@@ -650,6 +231,66 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "EInk SDA" bidirectional
+			(at 171.45 93.98 180)
+			(uuid "9d34822a-0efd-493a-b6b3-d345a4b0e4c8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{EInk Reset}" input
+			(at 171.45 106.68 180)
+			(uuid "2a6b4137-4917-4010-a321-a22d3d62fce7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "EInk Busy" output
+			(at 171.45 104.14 180)
+			(uuid "9fbef3bc-ea38-4d86-a258-cf5d3b312fcd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "EInk DC" input
+			(at 171.45 99.06 180)
+			(uuid "5dec089c-2d4d-404c-8a31-920a9064dcbe")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "EInk SCL" input
+			(at 171.45 96.52 180)
+			(uuid "e20ed5ab-db76-4641-bedc-c288ca5976fb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{EInk SS}" input
+			(at 171.45 101.6 180)
+			(uuid "b873b832-83ed-4f09-b77c-a4da4312f4cd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -692,6 +333,66 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "BATT Sense" output
+			(at 116.84 82.55 0)
+			(uuid "6f11c449-d3ef-4cfd-9afe-02351a12e094")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_D+" bidirectional
+			(at 116.84 78.74 0)
+			(uuid "dc2f39ff-b104-48a8-8da0-99aa8195d8e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_D-" bidirectional
+			(at 116.84 76.2 0)
+			(uuid "83da0f61-3578-480b-8f2a-18cbc488f9a5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB Sense" output
+			(at 116.84 85.09 0)
+			(uuid "1103a9e5-652e-4fc8-9425-e41e2ba4f476")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "STAT1" output
+			(at 116.84 88.9 0)
+			(uuid "07103e1d-acd5-432d-a295-a7bd9bb1810e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "STAT2" output
+			(at 116.84 91.44 0)
+			(uuid "7a1d7648-e400-4833-b7d2-0900757c42a6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -737,6 +438,196 @@
 				(hide yes)
 			)
 		)
+		(pin "EInk Busy" input
+			(at 160.02 104.14 0)
+			(uuid "673076ac-8ae8-49d4-b0a5-32a09aed7a6e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{EInk SS}" output
+			(at 160.02 101.6 0)
+			(uuid "2bfdf287-eec8-47d1-b4e9-d034ab5507ef")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "EInk SCL" output
+			(at 160.02 96.52 0)
+			(uuid "acbde728-03e3-451d-a10d-de97c7bfc995")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "EInk DC" output
+			(at 160.02 99.06 0)
+			(uuid "7a478de6-134d-4f1c-bd2b-002f2d730fe4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{EInk Reset}" output
+			(at 160.02 106.68 0)
+			(uuid "5e4e1cb2-060a-4117-877c-7c89e13fd93e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "EInk SDA" bidirectional
+			(at 160.02 93.98 0)
+			(uuid "7ca805ab-8d8f-455d-90ce-0ff64007f709")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_D-" bidirectional
+			(at 127 76.2 180)
+			(uuid "4e4812ea-2cb9-485f-a294-4c6d8cd3352f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "STAT1" input
+			(at 127 88.9 180)
+			(uuid "7b7152a4-ebd8-4993-b167-50b59933efe4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB Sense" input
+			(at 127 85.09 180)
+			(uuid "439e2910-f6ca-498c-8877-1073c5c13880")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BATT Sense" input
+			(at 127 82.55 180)
+			(uuid "2504c3ab-43a7-4e75-91dc-e9bb0730787a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_D+" bidirectional
+			(at 127 78.74 180)
+			(uuid "3f97c7d2-07e1-4cf2-a44b-aae9a18c0aae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "STAT2" input
+			(at 127 91.44 180)
+			(uuid "fff10595-783a-429f-b969-50e20954a5c3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Center Button" input
+			(at 127 121.92 180)
+			(uuid "f4073928-a172-44a7-99d2-2ab82b76928d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Right Button" input
+			(at 127 124.46 180)
+			(uuid "cb4db8fd-2aa4-487a-b311-b65ab80fa6a8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "EEPROM SCL" output
+			(at 127 109.22 180)
+			(uuid "cba8f139-79ae-4b7e-8b2d-83e31b119dd7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Left Button" input
+			(at 127 119.38 180)
+			(uuid "3ae19e12-7720-44c7-8ba2-0b2dd21cddae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "EEPROM SDA" output
+			(at 127 106.68 180)
+			(uuid "a58d1b99-c0d2-455c-8fa7-8cf3c5668204")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Sensor SDA" bidirectional
+			(at 127 113.03 180)
+			(uuid "848d7f58-40ec-4811-af39-e42a0da4b19f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Sensor SCL" output
+			(at 127 115.57 180)
+			(uuid "985362f0-001e-4ae4-9c86-afe0421c9529")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec"
@@ -777,6 +668,76 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "Sensor SDA" bidirectional
+			(at 116.84 113.03 0)
+			(uuid "977e766b-7318-4843-b984-6b3c780d464e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Center Button" output
+			(at 116.84 121.92 0)
+			(uuid "aca8d2d4-f609-4043-a59a-5d06477fffbf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Left Button" output
+			(at 116.84 119.38 0)
+			(uuid "1cbb8722-488c-427b-9cc2-481c2bbc80f1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Sensor SCL" input
+			(at 116.84 115.57 0)
+			(uuid "dfa8aedd-117f-49ca-a8da-1dceb53af761")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "EEPROM SDA" bidirectional
+			(at 116.84 106.68 0)
+			(uuid "e956c847-c94b-4fca-ab6b-c75f795dbc83")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "EEPROM SCL" input
+			(at 116.84 109.22 0)
+			(uuid "50b1b26a-eff7-42b8-8d5d-3efa7af6af55")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Right Button" output
+			(at 116.84 124.46 0)
+			(uuid "e71391ae-d456-4f40-965c-6dba386cfd07")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
