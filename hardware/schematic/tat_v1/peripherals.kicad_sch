@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "fa31a112-b783-481f-a900-2ce63881d73b")
 	(paper "A4")
+	(title_block
+		(title "Tiny Ambient Tracker - peripherals & user input")
+	)
 	(lib_symbols
 		(symbol "Device:C_Small"
 			(pin_numbers

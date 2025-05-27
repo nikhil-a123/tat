@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "93eb0196-ccee-4b59-a700-684975672f53")
 	(paper "A4")
+	(title_block
+		(title "Tiny Ambient Tracker - microcontroller")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x07_Pin"
 			(pin_names

@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "394801a7-3149-4d49-92f4-bb5a3d954697")
 	(paper "A4")
+	(title_block
+		(title "Tiny Ambient Tracker - Eink display")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x24_Socket"
 			(pin_names
