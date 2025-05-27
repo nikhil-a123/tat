@@ -9,6 +9,196 @@
 		(rev "v1.0")
 	)
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 113.03 137.16) (xy 123.19 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "243bdc80-405c-486c-a2e5-0c12f8536d3a")
+	)
+	(wire
+		(pts
+			(xy 156.21 123.19) (xy 167.64 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36334290-3d3d-4a9a-b043-f9a6f18b4436")
+	)
+	(wire
+		(pts
+			(xy 156.21 130.81) (xy 167.64 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37677a97-d021-4af4-9571-e5ce0e7e00fc")
+	)
+	(wire
+		(pts
+			(xy 113.03 113.03) (xy 123.19 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "589cd4b7-1717-4245-be28-019cdc931b48")
+	)
+	(wire
+		(pts
+			(xy 113.03 143.51) (xy 123.19 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59ef3f61-0356-4f61-80f6-e600cfa4ef08")
+	)
+	(wire
+		(pts
+			(xy 156.21 128.27) (xy 167.64 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61ce09e1-d634-4332-ad4d-4ea12e8fc73d")
+	)
+	(wire
+		(pts
+			(xy 113.03 102.87) (xy 123.19 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "780cead8-be0a-4382-ab90-676837d175b2")
+	)
+	(wire
+		(pts
+			(xy 113.03 130.81) (xy 123.19 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7853d4d2-17b8-4182-a34e-4020f0221435")
+	)
+	(wire
+		(pts
+			(xy 113.03 146.05) (xy 123.19 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91f5342e-d18d-4659-9499-bbfb72d5c6ee")
+	)
+	(wire
+		(pts
+			(xy 113.03 148.59) (xy 123.19 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97450ce7-f62a-4db5-a0ac-7f73b05c1584")
+	)
+	(wire
+		(pts
+			(xy 156.21 125.73) (xy 167.64 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dce9bd7-e522-4392-98d9-bc23debd1479")
+	)
+	(wire
+		(pts
+			(xy 113.03 106.68) (xy 123.19 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2ac192e-0e34-4b6e-9472-108b7d366dbb")
+	)
+	(wire
+		(pts
+			(xy 156.21 120.65) (xy 167.64 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af2632ea-55e1-45f3-a204-44f9e0644058")
+	)
+	(wire
+		(pts
+			(xy 113.03 109.22) (xy 123.19 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfe9be61-a7f9-484a-b883-141e64bb9061")
+	)
+	(wire
+		(pts
+			(xy 156.21 118.11) (xy 167.64 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c33f0b55-0d1e-4114-84fe-66dbb21a6ae1")
+	)
+	(wire
+		(pts
+			(xy 113.03 139.7) (xy 123.19 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7446beb-6ea7-41ab-a110-5b79abe9dd06")
+	)
+	(wire
+		(pts
+			(xy 113.03 115.57) (xy 123.19 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da609179-8a33-44f8-99f4-e258da88e906")
+	)
+	(wire
+		(pts
+			(xy 113.03 100.33) (xy 123.19 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc468e94-a88c-4214-ae31-6d1d84e09d1f")
+	)
+	(wire
+		(pts
+			(xy 113.03 133.35) (xy 123.19 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3cd546b-99a5-498a-922a-67e5680ddae5")
+	)
 	(hierarchical_label "~{EInk Reset}"
 		(shape input)
 		(at 167.64 130.81 0)
