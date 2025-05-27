@@ -1056,167 +1056,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C_Polarized"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C_Polarized"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Polarized capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "CP_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_Polarized_0_1"
-				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "C_Polarized_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:FerriteBead"
 			(pin_numbers
 				(hide yes)
@@ -3353,7 +3192,7 @@
 		(uuid "10ead86d-bdb3-4384-9974-2449cff40845")
 	)
 	(junction
-		(at 182.88 44.45)
+		(at 172.72 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "13c41c44-195c-4b6d-875b-dafd734afbf8")
@@ -3389,7 +3228,7 @@
 		(uuid "3661c5a1-fa70-45df-a96b-bfa40de06467")
 	)
 	(junction
-		(at 194.31 57.15)
+		(at 184.15 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "44446809-55e0-4023-a41d-b41e5d45c785")
@@ -3413,7 +3252,7 @@
 		(uuid "58cc090b-4ab5-4a49-bdbc-5dae5e2d2340")
 	)
 	(junction
-		(at 199.39 44.45)
+		(at 189.23 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6326d33c-70d5-4d4f-9328-0ca2fc0fae8c")
@@ -3443,7 +3282,7 @@
 		(uuid "8ac2344a-f409-4880-b5df-7d8487de029e")
 	)
 	(junction
-		(at 194.31 44.45)
+		(at 184.15 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d8ddee8-69e3-4485-9ded-f30db72409b6")
@@ -3483,12 +3322,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bfdeec02-2f49-48c2-9683-412ed776c2b7")
-	)
-	(junction
-		(at 167.64 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ca1ea327-c867-46e2-9586-258ee0756994")
 	)
 	(junction
 		(at 44.45 132.08)
@@ -3596,7 +3429,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 44.45) (xy 199.39 44.45)
+			(xy 184.15 44.45) (xy 189.23 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3806,7 +3639,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 66.04) (xy 194.31 67.31)
+			(xy 184.15 66.04) (xy 184.15 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3876,7 +3709,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 44.45) (xy 182.88 44.45)
+			(xy 168.91 44.45) (xy 172.72 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4096,7 +3929,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 44.45) (xy 182.88 48.26)
+			(xy 172.72 44.45) (xy 172.72 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4116,23 +3949,13 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 57.15) (xy 194.31 58.42)
+			(xy 184.15 57.15) (xy 184.15 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "742e6820-5439-4a10-9462-564940572305")
-	)
-	(wire
-		(pts
-			(xy 167.64 54.61) (xy 167.64 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74baee83-8427-4f4b-ab38-78fc1fb5a3d0")
 	)
 	(wire
 		(pts
@@ -4206,7 +4029,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 44.45) (xy 194.31 44.45)
+			(xy 172.72 44.45) (xy 184.15 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4276,16 +4099,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 44.45) (xy 167.64 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "968689fb-2a87-4a51-9518-91e2571586cf")
-	)
-	(wire
-		(pts
 			(xy 237.49 118.11) (xy 237.49 120.65)
 		)
 		(stroke
@@ -4306,7 +4119,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 44.45) (xy 194.31 48.26)
+			(xy 184.15 44.45) (xy 184.15 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4346,7 +4159,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 57.15) (xy 201.93 57.15)
+			(xy 184.15 57.15) (xy 191.77 57.15)
 		)
 		(stroke
 			(width 0)
@@ -4406,7 +4219,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 44.45) (xy 201.93 44.45)
+			(xy 189.23 44.45) (xy 191.77 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4616,16 +4429,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 44.45) (xy 167.64 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1c5bd25-6d77-41c6-ade4-0ffc11b2872d")
-	)
-	(wire
-		(pts
 			(xy 86.36 149.86) (xy 90.17 149.86)
 		)
 		(stroke
@@ -4726,7 +4529,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 44.45) (xy 171.45 44.45)
+			(xy 156.21 44.45) (xy 161.29 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4836,7 +4639,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 55.88) (xy 194.31 57.15)
+			(xy 184.15 55.88) (xy 184.15 57.15)
 		)
 		(stroke
 			(width 0)
@@ -4915,7 +4718,7 @@
 		(uuid "7ed8b263-ca8f-454b-ab19-584e11d9733f")
 	)
 	(label "VUSB"
-		(at 201.93 44.45 0)
+		(at 191.77 44.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4967,7 +4770,7 @@
 	)
 	(hierarchical_label "USB Sense"
 		(shape output)
-		(at 201.93 57.15 0)
+		(at 191.77 57.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5293,7 +5096,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 233.68 118.11 0)
 			(effects
 				(font
@@ -5320,6 +5123,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Link" "https://www.lcsc.com/product-detail/Inductors-SMD_Murata-Electronics-DFE18SAN1R0ME0L_C2044564.html?s_z=n_DFE18SAN1R0ME0"
+			(at 233.68 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2fce3bac-ade8-4ce3-8be9-a9893b403a87")
 		)
@@ -5330,73 +5142,6 @@
 			(project ""
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
 					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 167.64 55.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2efaf3b9-5f3f-442d-8783-27a8fdd71633")
-		(property "Reference" "#PWR011"
-			(at 167.64 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 167.64 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 167.64 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 167.64 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "62b021e8-3a14-4ae8-b782-153ee2242cd6")
-		)
-		(instances
-			(project "tat_v1"
-				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -5561,7 +5306,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 149.86 46.228 90)
 			(effects
 				(font
@@ -5570,7 +5315,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Murata-Electronics-BLM18PG221SN1D_C80165.pdf"
 			(at 149.86 44.45 0)
 			(effects
 				(font
@@ -5581,6 +5326,15 @@
 		)
 		(property "Description" "Ferrite bead"
 			(at 149.86 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Link" "https://www.lcsc.com/product-detail/Ferrite-Beads_Murata-Electronics-BLM18PG221SN1D_C80165.html?s_z=n_BLM18PG221SN1D"
+			(at 149.86 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5746,7 +5500,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45495c3e-c37d-454f-bfcc-ef65c46a9afd")
-		(property "Reference" "C8"
+		(property "Reference" "C7"
 			(at 269.24 133.3499 0)
 			(effects
 				(font
@@ -5764,7 +5518,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 266.3952 138.43 0)
 			(effects
 				(font
@@ -5773,7 +5527,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A476MQ8QRNC_C730416.pdf"
 			(at 265.43 134.62 0)
 			(effects
 				(font
@@ -5782,7 +5536,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Samsung Electro-Mechanics CL10A476MQ8QRNC"
+			(at 265.43 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Link" "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A476MQ8QRNC_C730416.html?s_z=n_CL10A476MQ8QRN"
 			(at 265.43 134.62 0)
 			(effects
 				(font
@@ -5800,7 +5563,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "C8")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -5915,7 +5678,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 194.31 67.31 0)
+		(at 184.15 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5923,8 +5686,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f077b79-c05e-42a5-a8cf-7782e72cecce")
-		(property "Reference" "#PWR012"
-			(at 194.31 73.66 0)
+		(property "Reference" "#PWR011"
+			(at 184.15 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5933,7 +5696,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 194.31 72.39 0)
+			(at 184.15 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5942,7 +5705,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.31 67.31 0)
+			(at 184.15 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5951,7 +5714,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 67.31 0)
+			(at 184.15 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5960,7 +5723,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 194.31 67.31 0)
+			(at 184.15 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5974,7 +5737,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR012")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -6008,7 +5771,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 98.552 161.29 90)
 			(effects
 				(font
@@ -6078,7 +5841,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 252.222 134.62 90)
 			(effects
 				(font
@@ -6192,7 +5955,7 @@
 	)
 	(symbol
 		(lib_id "Device:Polyfuse")
-		(at 175.26 44.45 90)
+		(at 165.1 44.45 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6201,7 +5964,7 @@
 		(fields_autoplaced yes)
 		(uuid "55773f6a-12f4-418d-9405-298126da504d")
 		(property "Reference" "F1"
-			(at 175.26 38.1 90)
+			(at 165.1 38.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6209,7 +5972,7 @@
 			)
 		)
 		(property "Value" "500mA"
-			(at 175.26 40.64 90)
+			(at 165.1 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6217,7 +5980,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 43.18 0)
+			(at 170.18 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6227,7 +5990,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 44.45 0)
+			(at 165.1 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6235,8 +5998,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
-			(at 175.26 44.45 0)
+		(property "Description" "Littelfuse 0805L020YR resettable fuse, 500mA trip current, 200mA hold current"
+			(at 165.1 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6269,7 +6032,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5921f2f4-a910-4742-b07f-56e3704f7bc0")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR012"
 			(at 196.85 146.05 0)
 			(effects
 				(font
@@ -6320,7 +6083,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR013")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -6354,7 +6117,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 108.712 161.29 90)
 			(effects
 				(font
@@ -6424,7 +6187,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 252.222 143.51 90)
 			(effects
 				(font
@@ -6476,7 +6239,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68f9cacf-cb86-4e23-b519-2295dc89250b")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR015"
 			(at 233.68 154.94 0)
 			(effects
 				(font
@@ -6527,7 +6290,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR016")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -6578,7 +6341,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "25V, low ESR ceramic capacitior (X5R or X7R)"
 			(at 26.67 156.21 0)
 			(effects
 				(font
@@ -6696,7 +6459,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 146.812 128.27 90)
 			(effects
 				(font
@@ -6765,7 +6528,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 113.792 72.39 90)
 			(effects
 				(font
@@ -6852,7 +6615,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "25V, low ESR ceramic capacitior (X5R or X7R)"
 			(at 52.07 127 0)
 			(effects
 				(font
@@ -6903,7 +6666,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 49.022 156.21 90)
 			(effects
 				(font
@@ -7106,7 +6869,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 106.172 72.39 90)
 			(effects
 				(font
@@ -7150,7 +6913,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Small")
-		(at 182.88 48.26 0)
+		(at 172.72 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7159,7 +6922,7 @@
 		(fields_autoplaced yes)
 		(uuid "a571f2e2-7ca0-46cb-b210-befe9622c3ca")
 		(property "Reference" "TP1"
-			(at 184.15 46.9899 0)
+			(at 173.99 46.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7168,7 +6931,7 @@
 			)
 		)
 		(property "Value" "VUSB"
-			(at 184.15 49.5299 0)
+			(at 173.99 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7177,7 +6940,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 187.96 48.26 0)
+			(at 177.8 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7186,7 +6949,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 48.26 0)
+			(at 177.8 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7195,7 +6958,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 182.88 48.26 0)
+			(at 172.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7260,7 +7023,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "25V Low ESR ceramic capacitior (X5R or X7R)"
 			(at 116.84 146.05 0)
 			(effects
 				(font
@@ -7362,7 +7125,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b07649f6-bd62-4651-a4ae-86308ea4f08f")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR013"
 			(at 203.2 158.75 0)
 			(effects
 				(font
@@ -7413,7 +7176,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR014")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -7421,7 +7184,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 194.31 62.23 0)
+		(at 184.15 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7429,7 +7192,7 @@
 		(dnp no)
 		(uuid "b908ab79-c4bc-4007-b2a1-8afe93163199")
 		(property "Reference" "R11"
-			(at 195.834 60.96 0)
+			(at 185.674 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7438,7 +7201,7 @@
 			)
 		)
 		(property "Value" "82k"
-			(at 196.088 63.5 0)
+			(at 185.928 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7446,8 +7209,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 192.532 62.23 90)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 182.372 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7456,7 +7219,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 194.31 62.23 0)
+			(at 184.15 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7465,7 +7228,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 194.31 62.23 0)
+			(at 184.15 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7498,7 +7261,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c11fe482-98ae-44bc-99d0-4b513fdc98e8")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR018"
 			(at 280.67 133.35 0)
 			(effects
 				(font
@@ -7548,7 +7311,7 @@
 		(instances
 			(project ""
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR019")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -7599,7 +7362,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "C0G Capacitor"
 			(at 143.51 50.8 0)
 			(effects
 				(font
@@ -7668,7 +7431,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "C0G Capacitor"
 			(at 156.21 50.8 0)
 			(effects
 				(font
@@ -7760,75 +7523,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 167.64 50.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d3d72d23-b517-4159-bc59-778ab39d4381")
-		(property "Reference" "C6"
-			(at 171.196 50.038 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 171.45 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 168.6052 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 167.64 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "16e6a7c6-c090-4773-83cb-ca7b1bdca7dd")
-		)
-		(pin "2"
-			(uuid "291cbd18-71d1-4ffe-bf7f-f936415d7607")
-		)
-		(instances
-			(project ""
-				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 254 149.86 0)
 		(unit 1)
@@ -7838,7 +7532,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d81ce5ca-e6e9-4f70-b343-b97edb543fd4")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR016"
 			(at 254 156.21 0)
 			(effects
 				(font
@@ -7889,7 +7583,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR017")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -7922,7 +7616,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 146.812 140.97 90)
 			(effects
 				(font
@@ -8033,7 +7727,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 199.39 44.45 0)
+		(at 189.23 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8042,7 +7736,7 @@
 		(fields_autoplaced yes)
 		(uuid "dd06ec2d-039b-4ac4-bdf8-c10dc7a4414f")
 		(property "Reference" "#FLG03"
-			(at 199.39 42.545 0)
+			(at 189.23 42.545 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8051,7 +7745,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 199.39 39.37 0)
+			(at 189.23 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8059,7 +7753,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 199.39 44.45 0)
+			(at 189.23 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8068,7 +7762,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 199.39 44.45 0)
+			(at 189.23 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8077,7 +7771,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 199.39 44.45 0)
+			(at 189.23 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8106,7 +7800,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "de9ba665-1518-4a43-b907-3fe780ed8c37")
-		(property "Reference" "C7"
+		(property "Reference" "C6"
 			(at 189.23 133.35 0)
 			(effects
 				(font
@@ -8142,7 +7836,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "0603 low ESR MLCC"
+			(at 196.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Link" "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Murata-Electronics-GRM187R61A226ME15D_C361061.html?s_z=n_GRM187R61A226ME15"
 			(at 196.85 134.62 0)
 			(effects
 				(font
@@ -8160,7 +7863,7 @@
 		(instances
 			(project ""
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "C7")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -8243,7 +7946,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e49bfccd-d72d-43ca-afe0-e42220658df8")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR014"
 			(at 219.71 144.78 0)
 			(effects
 				(font
@@ -8294,7 +7997,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR015")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -8369,7 +8072,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 194.31 52.07 0)
+		(at 184.15 52.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8377,7 +8080,7 @@
 		(dnp no)
 		(uuid "ed2283e7-846e-480e-a6ae-ce83f7da6ebf")
 		(property "Reference" "R10"
-			(at 195.834 50.8 0)
+			(at 185.674 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8386,7 +8089,7 @@
 			)
 		)
 		(property "Value" "33k"
-			(at 196.088 53.34 0)
+			(at 185.928 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8394,8 +8097,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 192.532 52.07 90)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 182.372 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8404,7 +8107,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 194.31 52.07 0)
+			(at 184.15 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8413,7 +8116,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 194.31 52.07 0)
+			(at 184.15 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8530,7 +8233,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f9cc35d2-2c5d-4393-838c-12f13a1cad34")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR017"
 			(at 265.43 147.32 0)
 			(effects
 				(font
@@ -8581,7 +8284,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/5056535a-bc75-42d4-a05e-c6bbb85e2678"
-					(reference "#PWR018")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -8614,7 +8317,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 33.782 156.21 90)
 			(effects
 				(font
@@ -8683,7 +8386,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 41.402 156.21 90)
 			(effects
 				(font
