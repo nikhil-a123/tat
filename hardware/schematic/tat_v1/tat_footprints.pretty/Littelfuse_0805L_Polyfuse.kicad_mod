@@ -1,0 +1,137 @@
+(footprint "Littelfuse_0805L_Polyfuse"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 1.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "ec8de070-1310-4cbc-9524-1edfd77b43ce")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Littelfuse_0805L_Polyfuse"
+		(at 0 3.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9d0273a2-fe71-4c3a-97a5-91dc61d6bc0b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121755_Littelfuse-0805L020YR_C126816.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fb9cfc72-3756-4653-8887-83d979f5c730")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Footprint for 0805 sized Littelfuse polyfuse"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed88af82-a662-4e39-9501-2d4822d7687f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Link" "https://www.lcsc.com/product-detail/Resettable-Fuses_Littelfuse-0805L020YR_C126816.html?s_z=n_Littelfuse%25200805L020YR"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a246b95a-16b3-48e6-b110-81ec74d515a1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_line
+		(start -1.8 -0.9)
+		(end 1.8 -0.9)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9b1ff0ef-1299-4fae-925b-cd152a8a193d")
+	)
+	(fp_line
+		(start -1.8 0.9)
+		(end -1.8 -0.9)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ce9e67c0-23a8-4f16-8eba-8cebcc03a346")
+	)
+	(fp_line
+		(start 1.8 -0.9)
+		(end 1.8 0.9)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "508b034e-2b31-425f-8ea9-ad80aa092d0a")
+	)
+	(fp_line
+		(start 1.8 0.9)
+		(end -1.8 0.9)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f7681ac2-c045-410c-80cc-c0d3272faa3f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 4.7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "70c5b50a-aef1-4e57-aaa0-f5603986b57b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.1 0)
+		(size 1 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "2c3fecd6-1d06-43b0-97a2-94b51f132548")
+	)
+	(pad "2" smd roundrect
+		(at 1.1 0)
+		(size 1 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "44d9ea40-d392-4c91-bcb8-6e7d42ad597e")
+	)
+	(embedded_fonts no)
+)

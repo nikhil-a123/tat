@@ -68,6 +68,7 @@ JST SM07B-SRSS-TB(LF)(SN) 7 Pin JST-SH SMD Header - LCSC $3.43 for 10+
 
 --- INPUT ---
 SHOU HAN TS24CA Right Angle tactile switch - LCSC $0.44 for 20+
+SHOU HAN MINI MSK12CO2 right angle SPDT slide switch - LCSC $1.36 for 10+
 
 https://github.com/ebastler/zmk-designguide?tab=readme-ov-file#Schematics-and-design-considerations
 
@@ -77,3 +78,7 @@ https://en.ovcharov.me/2020/02/29/how-to-measure-battery-level-with-esp32-microc
 https://www.alibaba.com/product-detail/New-Arrival-2-13-122-x_1600751165878.html?spm=a2700.shop_plser.41413.2.62b47e28SYuPC7
 
 https://www.alibaba.com/product-detail/2-9-Inch-168x384-Mono-TFT_1600986524274.html?spm=a2700.details.you_may_like.4.6f3b274dfezCYS
+
+FOOTPRINTS TO COMPLETE
+
+Polyfuse 

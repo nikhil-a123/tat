@@ -3938,7 +3938,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_FFC-FPC:Jushuo_AFC07-S24FCA-00_1x24-1MP_P0.50_Horizontal"
 			(at 154.94 99.06 0)
 			(effects
 				(font
@@ -3947,7 +3947,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_JUSHUO-AFC07-S24ECA-00_C262643.pdf"
 			(at 154.94 99.06 0)
 			(effects
 				(font
@@ -3956,7 +3956,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x24, script generated"
+		(property "Description" "24-socket FPC, 0.5mm pitch, slide lock"
+			(at 154.94 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.lcsc.com/product-detail/FFC-FPC-Flat-Flexible-Connector-Assemblies_JUSHUO-AFC07-S24ECA-00_C262643.html?s_z=n_JUSHUO%2520AFC07-S24ECA-00"
 			(at 154.94 99.06 0)
 			(effects
 				(font
@@ -4210,7 +4219,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "76a0f9cd-a5ef-4236-bb6f-a4b2a90598d0")
-		(property "Reference" "R28"
+		(property "Reference" "R31"
 			(at 59.944 119.38 0)
 			(effects
 				(font
@@ -4273,7 +4282,7 @@
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/3e709284-5543-4534-bf58-110f53ad5a3b"
-					(reference "R28")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -4718,7 +4727,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Q_NMOS"
+		(property "Value" "AO3402 NMOS"
 			(at 72.39 107.9499 0)
 			(effects
 				(font
@@ -4727,7 +4736,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 71.12 104.14 0)
 			(effects
 				(font
@@ -4855,7 +4864,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "be2eb32d-0d7a-46b2-8c8e-6a6e8104b8a1")
-		(property "Reference" "R29"
+		(property "Reference" "R32"
 			(at 70.104 119.38 0)
 			(effects
 				(font
@@ -4918,7 +4927,7 @@
 		(instances
 			(project ""
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/3e709284-5543-4534-bf58-110f53ad5a3b"
-					(reference "R29")
+					(reference "R32")
 					(unit 1)
 				)
 			)

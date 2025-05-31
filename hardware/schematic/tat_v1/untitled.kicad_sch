@@ -5014,7 +5014,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "tat_footprints:WSON-10 BQ25185"
 			(at 74.93 146.05 0)
 			(effects
 				(font
@@ -5953,7 +5953,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "tat_footprints:SW_SPDT_HANXIA_Mini_MSK12CO2"
 			(at 212.09 142.24 0)
 			(effects
 				(font
@@ -5962,7 +5962,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2407161403_SHOU-HAN-MINI-MSK12CO2_C2681570.pdf"
 			(at 212.09 134.62 0)
 			(effects
 				(font
@@ -5972,6 +5972,15 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
+			(at 212.09 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.lcsc.com/product-detail/Slide-Switches_SHOU-HAN-MINI-MSK12CO2_C2681570.html"
 			(at 212.09 142.24 0)
 			(effects
 				(font
@@ -6024,7 +6033,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "tat_footprints:Littelfuse_0805L_Polyfuse"
 			(at 170.18 43.18 0)
 			(effects
 				(font
@@ -7208,7 +7217,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal"
 			(at 30.48 120.65 0)
 			(effects
 				(font
@@ -7217,7 +7226,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411192313_XUNPU-WAFER-PH2-0-2PWB_C3029440.pdf"
 			(at 30.48 120.65 0)
 			(effects
 				(font
@@ -7226,7 +7235,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
+		(property "Description" "JST-PH 2-pin surface mount connector, right angle"
+			(at 30.48 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.lcsc.com/product-detail/Wire-To-Board-Connector_XUNPU-WAFER-PH2-0-2PWB_C3029440.html?s_z=n_XUNPU%2520WAFER-PH2.0-2PWB"
 			(at 30.48 120.65 0)
 			(effects
 				(font
