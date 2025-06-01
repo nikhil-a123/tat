@@ -272,156 +272,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_Push"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 1.27 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Push button switch, generic, two pins"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "switch normally-open pushbutton push-button"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_Push_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers
@@ -718,6 +568,44 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -6.35 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -3.81 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1069,6 +957,205 @@
 					(at 0 -8.89 90)
 					(length 2.54)
 					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "tat_library:TS24CA"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TS24CA"
+				(at 0 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "tat_footprints:SW_Push_SHOU_HAN_SPST_RightAngle_TS24CA"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2404241539_SHOU-HAN-TS24CA_C393942.pdf"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Link" "https://www.lcsc.com/product-detail/Tactile-Switches_SHOU-HAN-TS24CA_C393942.html?s_z=n_SHOU%2520HAN%2520TS24CA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TS24CA_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TS24CA_1_1"
+				(pin no_connect line
+					(at 0 -1.27 90)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 1.27 -1.27 90)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2500,7 +2587,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.5mm"
+		(property "Footprint" "tat_footprints:EEPROM_BL24C08F-NTRC"
 			(at 228.6 99.06 0)
 			(effects
 				(font
@@ -2509,7 +2596,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121550_BL-Shanghai-Belling-BL24C08F-NTRC_C5185882.pdf"
 			(at 228.6 99.06 0)
 			(effects
 				(font
@@ -2519,6 +2606,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 228.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.lcsc.com/product-detail/EEPROM_BL-Shanghai-Belling-BL24C08F-NTRC_C5185882.html?s_z=n_BL24C08F-NTRC"
 			(at 228.6 99.06 0)
 			(effects
 				(font
@@ -2545,6 +2641,12 @@
 		(pin "7"
 			(uuid "afef4acc-3875-497d-bd67-ed5159b16a46")
 		)
+		(pin "2"
+			(uuid "71ca2e63-227d-40a1-943b-174a72b579a5")
+		)
+		(pin "1"
+			(uuid "45be81b3-a88b-4900-8896-5725a7708cd7")
+		)
 		(instances
 			(project "tat_v1"
 				(path "/b6d2ddf1-6792-45dd-afc9-29fd74d587ec/c7fedf3e-0076-4d27-8f18-2fdc24044d55"
@@ -2555,7 +2657,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
+		(lib_id "tat_library:TS24CA")
 		(at 52.07 105.41 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2588,7 +2690,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2404241539_SHOU-HAN-TS24CA_C393942.pdf"
 			(at 46.99 105.41 0)
 			(effects
 				(font
@@ -2606,11 +2708,26 @@
 				(hide yes)
 			)
 		)
+		(property "Link" "https://www.lcsc.com/product-detail/Tactile-Switches_SHOU-HAN-TS24CA_C393942.html?s_z=n_SHOU%2520HAN%2520TS24CA"
+			(at 52.07 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e5b80016-edae-4037-a839-1759cc9305c6")
 		)
 		(pin "1"
 			(uuid "1654651a-92f6-4de4-bd86-0e19f3131ce4")
+		)
+		(pin "3"
+			(uuid "8c0c79fd-ba89-4e58-9a39-27e593a91c3f")
+		)
+		(pin "4"
+			(uuid "a695ce0e-e503-4832-96fd-21c2d9eaf07d")
 		)
 		(instances
 			(project "tat_v1"
@@ -2622,7 +2739,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
+		(lib_id "tat_library:TS24CA")
 		(at 52.07 66.04 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2664,7 +2781,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "TS24CA surface mount right angle switch"
+		(property "Description" "Push button switch, generic, two pins"
 			(at 52.07 66.04 0)
 			(effects
 				(font
@@ -2674,7 +2791,7 @@
 			)
 		)
 		(property "Link" "https://www.lcsc.com/product-detail/Tactile-Switches_SHOU-HAN-TS24CA_C393942.html?s_z=n_SHOU%2520HAN%2520TS24CA"
-			(at 52.07 66.04 90)
+			(at 52.07 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2687,6 +2804,12 @@
 		)
 		(pin "1"
 			(uuid "6ba68ed1-3ca9-48a7-8e01-f40d340ae933")
+		)
+		(pin "4"
+			(uuid "fe1a678d-c69c-4f8f-b08f-ca62708c0188")
+		)
+		(pin "3"
+			(uuid "525f79c1-eeb3-4457-a5fb-b3e524d2b460")
 		)
 		(instances
 			(project "tat_v1"
@@ -3914,7 +4037,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
+		(lib_id "tat_library:TS24CA")
 		(at 52.07 146.05 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3947,7 +4070,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2404241539_SHOU-HAN-TS24CA_C393942.pdf"
 			(at 46.99 146.05 0)
 			(effects
 				(font
@@ -3965,11 +4088,26 @@
 				(hide yes)
 			)
 		)
+		(property "Link" "https://www.lcsc.com/product-detail/Tactile-Switches_SHOU-HAN-TS24CA_C393942.html?s_z=n_SHOU%2520HAN%2520TS24CA"
+			(at 52.07 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9efa2d1a-ed81-4808-a335-248cdbd4c872")
 		)
 		(pin "1"
 			(uuid "5ca262d4-bf5b-4c17-8b80-704affd97cfb")
+		)
+		(pin "4"
+			(uuid "ee374edc-3fee-4436-a0eb-5faa7a4e2368")
+		)
+		(pin "3"
+			(uuid "0b72df29-06ea-48d7-a871-32304cdd2139")
 		)
 		(instances
 			(project "tat_v1"

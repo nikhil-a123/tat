@@ -166,6 +166,14 @@
 		(thermal_bridge_angle 45)
 		(uuid "45550f09-049c-45c1-a67b-b6464197f6c1")
 	)
+	(pad "5" smd roundrect
+		(at 0 0)
+		(size 0.9 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "730b8f8a-3ca9-47e1-b8a4-1f93095c138c")
+	)
 	(pad "6" smd roundrect
 		(at 1.05 0.8)
 		(size 0.5 0.2)
@@ -205,14 +213,6 @@
 		(roundrect_rratio 0.15)
 		(thermal_bridge_angle 45)
 		(uuid "e59bc903-fdae-499f-9b6b-411dcc4770d9")
-	)
-	(pad "11" smd roundrect
-		(at 0 0)
-		(size 0.9 1.5)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.15)
-		(thermal_bridge_angle 45)
-		(uuid "730b8f8a-3ca9-47e1-b8a4-1f93095c138c")
 	)
 	(group ""
 		(uuid "fda56bc6-fdc5-4faf-83d3-588847426beb")
