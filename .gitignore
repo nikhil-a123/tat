@@ -1,6 +1,12 @@
 # editors
+.vscode
 *.swp
 *~
 
 # build
-/build*/
+build
+build*
+/twister-out*
+
+# docs
+/doc/_build*
