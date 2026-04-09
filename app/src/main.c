@@ -10,6 +10,12 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/shell/shell.h>
 
+#include <zephyr/zbus/zbus.h>
+
+#include "events/periodic_event.h"
+
+#include "sensors/tat_test_sensor.h"
+
 //#include <zephyr/drivers/i2c.h>
 //#include <zephyr/drivers/gpio.h>
 //#include <zephyr/drivers/sensor.h>
@@ -26,6 +32,36 @@
 //const struct device *display = DEVICE_DT_GET(DISPLAY_NODE);
 
 LOG_MODULE_REGISTER(main);
+
+/* zbus listener callbacks, executes synchronously from caller context
+   so we should execute as fast as possible */
+/* void slow_listener_callback(const struct zbus_channel *chan)
+{
+	const struct periodic_event *acc;
+	if (&periodic_event_10s_chan == chan) {
+		LOG_DBG("Hello from slow listener callback!");
+	}	
+}
+
+void medium_listener_callback(const struct zbus_channel *chan)
+{
+	const struct acc_msg *acc;
+	if (&periodic_event_1s_chan == chan) {
+		LOG_DBG("Hello from medium listener callback!");
+	}	
+}
+
+void fast_listener_callback(const struct zbus_channel *chan)
+{
+	const struct acc_msg *acc;
+	if (&periodic_event_100ms_chan == chan) {
+		LOG_DBG("Hello from fast listener callback!");
+	}	
+}
+
+ZBUS_LISTENER_DEFINE(slow_listener, slow_listener_callback);
+ZBUS_LISTENER_DEFINE(medium_listener, medium_listener_callback);
+ZBUS_LISTENER_DEFINE(fast_listener, fast_listener_callback); */
 
 int main(void)
 {
@@ -51,6 +87,8 @@ int main(void)
 		//LOG_ERR("Failed to turn blanking off (error %d)", ret);
 		return 0;
 	} */
+
+	tat_test_sensor_init();
 
 	while (1) {
 /* 		uint32_t sleep_ms;

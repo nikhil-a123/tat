@@ -24,6 +24,12 @@ target_sources(app PRIVATE
     #${LVGL_DIR}/demos/widgets/lv_demo_widgets_shop.c
 )
 
+add_subdirectory(src/events)
+add_subdirectory(src/sensors)
+
 target_include_directories(app PRIVATE
     #${LVGL_DIR}/demos/
 )
+
+include_directories(src/events)
+include_directories(src/sensors)
