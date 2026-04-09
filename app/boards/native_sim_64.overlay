@@ -18,8 +18,8 @@
     status = "okay";
 };
 
-&sdl_dc {
+/* &sdl_dc {
 	compatible = "zephyr,sdl-dc";
 	height = <240>;
 	width = <400>;
-};
+}; */
