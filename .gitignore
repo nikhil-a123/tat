@@ -10,3 +10,7 @@ build*
 
 # docs
 /doc/_build*
+
+# Zephyr workspace
+/.west
+/external

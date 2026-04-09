@@ -1,6 +1,5 @@
 manifest:
   self:
-    path: tat
   remotes:
     - name: nrf
       url-base: https://github.com/nrfconnect
@@ -11,4 +10,14 @@ manifest:
       revision: v3.2.4
       import:
         path-prefix: external
+        name-blocklist:
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_silabs
+          - hal_ti
+          - hal_xtensa
       clone-depth: 1
