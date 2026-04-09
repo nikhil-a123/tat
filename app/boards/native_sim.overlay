@@ -1,0 +1,6 @@
+&i2c0 {
+    accel0: accel@68 {
+        compatible = "bosch,bmi160";
+        reg = <0x68>;
+    };
+};
