@@ -1,5 +1,10 @@
 {
     "nrf-connect.applications": [
         "${workspaceFolder}/app"
-    ]
+    ],
+    "remote.extensionKind": {
+        "ms-vscode.vscode-serial-monitor": [
+              "workspace"
+        ]
+    },
 }
