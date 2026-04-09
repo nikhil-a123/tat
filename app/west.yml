@@ -1,5 +1,4 @@
 manifest:
-  self:
   remotes:
     - name: nrf
       url-base: https://github.com/nrfconnect

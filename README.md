@@ -45,19 +45,12 @@ Follow the official
 
 This section represents alternative approaches for initializing the workspace.
 
-#### Initialize workspace from scratch
-
-The first step is to initialize the workspace folder (``ncs``) where
-the ``ncs-example-application`` and all nRF Connect SDK modules will be cloned.
-Run the following commands:
-
-```shell
-# Initialize ncs for the ncs-example-application (main branch)
-west init -m https://github.com/nrfconnect/ncs-example-application --mr main ncs
-# Update nRF Connect SDK modules
-cd ncs
-west update
-```
+- Install nRF Util
+- Install the nRF Connect VSCode Extension Pack
+- Install SDK v3.4.2
+- Clone tat repository
+- Run west init -l app
+- Run west update
 
 #### Add application into existing nRF Connect SDK workspace
 
