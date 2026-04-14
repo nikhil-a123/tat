@@ -23,6 +23,7 @@
 #include <string.h>
 
 #include <lvgl.h>
+#include <lvgl_input_device.h>
 
 //#include "applications/enviromental_data/enviromental_data_app.h"
 //#include "tat_application_manager.h"
@@ -44,20 +45,28 @@ static struct input_event last_input_event; */
 
 /* static bool is_buttons_for_lvgl = false; */
 
-static struct input_event last_input_event;
+#define KEYS_NODE DT_CHOSEN(zephyr_display)
+
+static const struct device *display = DEVICE_DT_GET_OR_NULL(DISPLAY_NODE);
+
+static const struct device *const keys = DEVICE_DT_GET(DT_COMPAT_GET_ANY_STATUS_OKAY(zephyr_lvgl_keypad_input));
+
+//static struct input_event last_input_event;
 
 static lv_obj_t *root_screen;
 static lv_group_t *input_group;
-static lv_indev_t *enc_indev;
-static uint8_t last_pressed;
+static lv_indev_t *keys_indev;
+//static uint8_t last_pressed;
 
-static void encoder_read(lv_indev_t *indev, lv_indev_data_t *data);
+//static void encoder_read(lv_indev_t *indev, lv_indev_data_t *data);
 static void on_input_subsys_callback(struct input_event *evt, void *user_data);
 /* static void on_watchface_app_event_callback(watchface_app_evt_t evt); */
 /* static void async_turn_off_buttons_allocation(void *unused);
 static void open_application_manager_page(void *app_name);
 static void on_application_manager_close(void);
 static void on_onboarding_done(void); */
+
+INPUT_CALLBACK_DEFINE(NULL, on_input_subsys_callback, NULL);
 
 LOG_MODULE_REGISTER(tat_ui_controller);
 
@@ -221,19 +230,17 @@ int tat_ui_controller_init(void)
 
     lv_obj_set_style_bg_color(root_screen, tat_color_black(), LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    INPUT_CALLBACK_DEFINE(NULL, on_input_subsys_callback, NULL);
-
-    enc_indev = lv_indev_create();
-    lv_indev_set_type(enc_indev, LV_INDEV_TYPE_ENCODER);
-    lv_indev_set_read_cb(enc_indev, encoder_read);
-    lv_indev_set_group(enc_indev, input_group);
+    keys_indev = lvgl_input_get_indev(keys);
+    //lv_indev_set_type(enc_indev, LV_INDEV_TYPE_ENCODER);
+    //lv_indev_set_read_cb(enc_indev, encoder_read);
+    lv_indev_set_group(keys_indev, input_group);
 
     input_group = lv_group_create();
     lv_group_set_default(input_group);
-    lv_indev_set_group(enc_indev, input_group);
+    lv_indev_set_group(keys_indev, input_group);
 
     // Start the enviromental data screen here...
-    //watchface_app_start(root_screen, input_group, on_watchface_app_event_callback);
+    //enviromental_data_app_start(root_screen, input_group);
 
     LOG_INF("UI Controller initialized");
 

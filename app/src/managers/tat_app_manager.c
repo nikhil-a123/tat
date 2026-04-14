@@ -123,6 +123,7 @@ void tat_app_manager_add_application(application_t *app)
     __ASSERT_NO_MSG(num_apps < MAX_APPS);
 
     apps[num_apps] = app;
+    LOG_INF("Added application %d", num_apps);
     num_apps++;
 }
 
@@ -139,11 +140,12 @@ application_t *tat_app_manager_get_app(int index)
     return apps[index];
 }
 
-static int application_manager_init(void)
+static int app_manager_init(void)
 {
     memset(apps, 0, sizeof(apps));
     num_apps = 0;
     current_app = INVALID_APP_ID;
+    LOG_INF("Initializing application manager!");
 
     return 0;
 }
