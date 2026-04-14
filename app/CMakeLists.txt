@@ -8,28 +8,18 @@ cmake_minimum_required(VERSION 3.20.0)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(app)
 
-#set(LVGL_DIR ${ZEPHYR_LVGL_MODULE_DIR})
-
 target_sources(app PRIVATE 
     src/main.c
-    #${LVGL_DIR}/demos/lv_demos.c
-    #${LVGL_DIR}/demos/widgets/assets/img_clothes.c
-    #${LVGL_DIR}/demos/widgets/assets/img_demo_widgets_avatar.c
-    #${LVGL_DIR}/demos/widgets/assets/img_demo_widgets_needle.c
-    #${LVGL_DIR}/demos/widgets/assets/img_lvgl_logo.c
-    #${LVGL_DIR}/demos/widgets/lv_demo_widgets.c
-    #${LVGL_DIR}/demos/widgets/lv_demo_widgets_analytics.c
-    #${LVGL_DIR}/demos/widgets/lv_demo_widgets_components.c
-    #${LVGL_DIR}/demos/widgets/lv_demo_widgets_profile.c
-    #${LVGL_DIR}/demos/widgets/lv_demo_widgets_shop.c
 )
 
+#add_subdirectory(src/applications)
 add_subdirectory(src/events)
+#add_subdirectory(src/managers)
 add_subdirectory(src/sensors)
+add_subdirectory(src/ui)
 
-target_include_directories(app PRIVATE
-    #${LVGL_DIR}/demos/
-)
-
+#include_directories(src/applications)
 include_directories(src/events)
+#include_directories(src/managers)
 include_directories(src/sensors)
+include_directories(src/ui)

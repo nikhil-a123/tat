@@ -16,94 +16,81 @@
 
 #include "sensors/tat_test_sensor.h"
 
-//#include <zephyr/drivers/i2c.h>
+#include "ui/tat_ui_controller.h"
+
+#include <zephyr/drivers/i2c.h>
 //#include <zephyr/drivers/gpio.h>
-//#include <zephyr/drivers/sensor.h>
-//#include <zephyr/drivers/display.h>
+#include <zephyr/drivers/sensor.h>
+#include <zephyr/drivers/display.h>
 
 /* LVGL includes */
-//#include <lvgl.h>
-//#include <lvgl_mem.h>
-//#include <lvgl_zephyr.h>
-//#include <lv_demos.h>
+#include <lvgl.h>
+#include <lvgl_mem.h>
+#include <lvgl_zephyr.h>
 
-//#define DISPLAY_NODE DT_NODELABEL(sdl_dc)
+#define DISPLAY_NODE DT_CHOSEN(zephyr_display)
 
-//const struct device *display = DEVICE_DT_GET(DISPLAY_NODE);
+const struct device *display = DEVICE_DT_GET_OR_NULL(DISPLAY_NODE);
 
 LOG_MODULE_REGISTER(main);
 
-/* zbus listener callbacks, executes synchronously from caller context
-   so we should execute as fast as possible */
-/* void slow_listener_callback(const struct zbus_channel *chan)
-{
-	const struct periodic_event *acc;
-	if (&periodic_event_10s_chan == chan) {
-		LOG_DBG("Hello from slow listener callback!");
-	}	
-}
-
-void medium_listener_callback(const struct zbus_channel *chan)
-{
-	const struct acc_msg *acc;
-	if (&periodic_event_1s_chan == chan) {
-		LOG_DBG("Hello from medium listener callback!");
-	}	
-}
-
-void fast_listener_callback(const struct zbus_channel *chan)
-{
-	const struct acc_msg *acc;
-	if (&periodic_event_100ms_chan == chan) {
-		LOG_DBG("Hello from fast listener callback!");
-	}	
-}
-
-ZBUS_LISTENER_DEFINE(slow_listener, slow_listener_callback);
-ZBUS_LISTENER_DEFINE(medium_listener, medium_listener_callback);
-ZBUS_LISTENER_DEFINE(fast_listener, fast_listener_callback); */
+/* static lv_obj_t *main_screen;
+static lv_obj_t *button;
+static lv_obj_t *my_label; */
 
 int main(void)
 {
-	//int ret;
+	int ret;
 
-/* 	if (!device_is_ready(display)) {
-		LOG_ERR("Device not ready, aborting test");
+	if (!device_is_ready(display)) {
+		LOG_ERR("No display found!");
 		return 0;
-	} */
-
-/* 	lvgl_lock();
-
-	lv_demo_widgets(); */
-
-	//lv_demo_render(0, 255);
-
-/* 	lv_timer_handler();
-
-	lvgl_unlock(); */
-
-/* 	ret = display_blanking_off(display);
-	if (ret < 0 && ret != -ENOSYS) {
-		//LOG_ERR("Failed to turn blanking off (error %d)", ret);
-		return 0;
-	} */
+	}
 
 	tat_test_sensor_init();
 
+	/* Setup LVGL stuff */
+/* 	main_screen = lv_obj_create(NULL);
+	lv_obj_set_style_bg_color(main_screen, lv_color_hex(0xffffff), LV_PART_MAIN); */
+
+/* 	button = lv_button_create(main_screen);
+	lv_obj_set_size(button, lv_pct(25), LV_SIZE_CONTENT);
+	lv_obj_align(button, LV_ALIGN_RIGHT_MID, -20, 0); */
+
+/* 	my_label = lv_label_create(button);
+	lv_label_set_text_fmt(my_label, "Click me!");
+	lv_obj_set_style_text_color(my_label, lv_color_hex(0xffffff), 0); */
+
+/* 	my_label = lv_label_create(main_screen);
+	lv_label_set_text(my_label, "Click me!");
+	lv_obj_set_style_text_color(my_label, lv_color_hex(0x00), 0); */
+
+    /*Change the active screen's background color*/
+/* 	main_screen = lv_obj_create(NULL);
+    lv_obj_set_style_bg_color(main_screen, lv_color_hex(0xffffff), LV_PART_MAIN); */
+
+    /*Create a white label, set its text and align it to the center*/
+/*     my_label = lv_label_create(main_screen);
+    lv_label_set_text(my_label, "Hello world");
+    lv_obj_set_style_text_color(main_screen, lv_color_hex(0x000000), LV_PART_MAIN);
+    lv_obj_align(my_label, LV_ALIGN_CENTER, 0, 0); */
+
+/* 	lv_screen_load(main_screen); */
+
+	lv_timer_handler();
+	ret = display_blanking_off(display);
+	if (ret < 0 && ret != -ENOSYS) {
+		LOG_ERR("Failed to turn blanking off (error %d)", ret);
+		return 0;
+	}
+
+	tat_ui_controller_init();
+	LOG_INF("tat application started!");
+
+	uint32_t sleep_ms;
 	while (1) {
-/* 		uint32_t sleep_ms;
-
-		lvgl_lock();
 		sleep_ms = lv_timer_handler();
-		lvgl_unlock(); */
-
-		/* k_msleep(MIN(sleep_ms, INT32_MAX)); */
-		//LOG_INF("Info");
-		//LOG_WRN("Warning");
-		//LOG_ERR("Error");
-		//LOG_DBG("Debug");
-
-		k_msleep(1000);
+		k_msleep(MIN(sleep_ms, INT32_MAX));
 	}
 
 	/* Test the accelerometer */
