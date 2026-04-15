@@ -25,7 +25,7 @@
 #include <lvgl.h>
 #include <lvgl_input_device.h>
 
-//#include "applications/enviromental_data/enviromental_data_app.h"
+#include "enviromental_data/enviromental_data_app.h"
 //#include "tat_application_manager.h"
 #include "tat_ui_controller.h"
 #include "tat_ui.h"
@@ -206,7 +206,7 @@ LOG_MODULE_REGISTER(tat_ui_controller);
 
 static void on_input_subsys_callback(struct input_event *evt, void *user_data)
 {
-    LOG_DBG("Input event received: type=%u, code=%u, value=%d", evt->type, evt->code, evt->value);
+    LOG_INF("Input event received: type=%u, code=%u, value=%d", evt->type, evt->code, evt->value);
 
     // The following events are ignored (will block a wakeup of the display):
     //  - Generic touch events (INPUT_BTN_TOUCH, INPUT_ABS_X, INPUT_ABS_Y)
@@ -226,13 +226,12 @@ static void on_input_subsys_callback(struct input_event *evt, void *user_data)
 
 int tat_ui_controller_init(void)
 {
-    root_screen = lv_scr_act();
+    root_screen = lv_screen_active();
 
     lv_obj_set_style_bg_color(root_screen, tat_color_black(), LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    /* Associate the user input keys with the widget group */
     keys_indev = lvgl_input_get_indev(keys);
-    //lv_indev_set_type(enc_indev, LV_INDEV_TYPE_ENCODER);
-    //lv_indev_set_read_cb(enc_indev, encoder_read);
     lv_indev_set_group(keys_indev, input_group);
 
     input_group = lv_group_create();
@@ -240,7 +239,7 @@ int tat_ui_controller_init(void)
     lv_indev_set_group(keys_indev, input_group);
 
     // Start the enviromental data screen here...
-    //enviromental_data_app_start(root_screen, input_group);
+    enviromental_data_app_start(root_screen, input_group);
 
     LOG_INF("UI Controller initialized");
 

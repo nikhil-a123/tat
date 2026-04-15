@@ -15,7 +15,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#ifndef ENVIROMENTAL_DATA_APP_H_
+#define ENVIROMENTAL_DATA_APP_H_
 
 #include <lvgl.h>
 #include <zephyr/init.h>
@@ -65,11 +66,13 @@ typedef struct enviromental_data_ui_api_t {
     const char *name;
 } enviromental_data_ui_api_t;
 
-void enviromental_data_app_start(lv_obj_t *root_screen, lv_group_t *group, enviromental_data_app_evt_listener evt_cb);
+void enviromental_data_app_start(lv_obj_t *root_screen, lv_group_t *group);
 void enviromental_data_app_stop(void);
-//void enviromental_data_change(int index);
-int enviromental_data_app_get_current_face(void);
+void enviromental_data_app_screen_change(int index);
+int enviromental_data_app_get_current_screen(void);
 void enviromental_data_app_register_ui(enviromental_data_ui_api_t *ui);
 
-int enviromental_data_app_get_num_faces(void);
-int enviromental_data_app_get_face_info(int index, const char **name);
+int enviromental_data_app_get_num_screens(void);
+int enviromental_data_app_get_screen_info(int index, const char **name);
+
+#endif /* ENVIROMENTAL_DATA_APP_H_ */

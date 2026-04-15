@@ -10,10 +10,9 @@
 
 #include <zephyr/logging/log.h>
 
-#include "ui/zsw_ui.h"
-#include "enviromental_data_app.h"
+#include "enviromental_data/enviromental_data_app.h"
 
-LOG_MODULE_REGISTER(env_data_simple_screen, LOG_LEVEL_WRN);
+LOG_MODULE_REGISTER(env_data_simple_screen);
 
 static lv_obj_t *env_data_simple_screen = NULL;
 
@@ -21,11 +20,11 @@ void env_data_simple_screen_show(lv_obj_t *parent)
 {
     // Create a child container under root, this is your app's root element
     env_data_simple_screen = lv_obj_create(parent);
-    lv_obj_set_size(root_page, LV_PCT(100), LV_PCT(100));
-    lv_obj_set_style_border_width(root_page, 0, LV_PART_MAIN);
+    lv_obj_set_size(env_data_simple_screen, LV_PCT(100), LV_PCT(100));
+    lv_obj_set_style_border_width(env_data_simple_screen, 0, LV_PART_MAIN);
 
     // Create your LVGL UI under root_page
-    lv_obj_t *label = lv_label_create(root_page);
+    lv_obj_t *label = lv_label_create(env_data_simple_screen);
     lv_label_set_text(label, "Hello from Enviromental Data!");
     lv_obj_center(label);
 
@@ -45,17 +44,17 @@ static void env_data_simple_screen_remove(void)
 static enviromental_data_ui_api_t ui_api = {
     .show = env_data_simple_screen_show,
     .remove = env_data_simple_screen_remove,
-    .set_battery_percent = NULL,
-    .ui_invalidate_cached = NULL,
-    .get_preview_img = NULL,
+    //.set_battery_percent = NULL,
+    //.ui_invalidate_cached = NULL,
+    //.get_preview_img = NULL,
     .name = "Simple"
 };
 
 static int env_data_simple_screen_init(void)
 {
     enviromental_data_app_register_ui(&ui_api);
-
+    LOG_INF("Registering simple screen!");
     return 0;
 }
 
-SYS_INIT(env_data_simple_screen_init, APPLICATION, WATCHFACE_UI_INIT_PRIO);
+SYS_INIT(env_data_simple_screen_init, APPLICATION, ENVIROMENTAL_DATA_UI_INIT_PRIO);
