@@ -24,7 +24,10 @@ void env_data_simple_screen_show(lv_obj_t *parent)
     lv_obj_set_style_border_width(env_data_simple_screen, 0, LV_PART_MAIN);
 
     // Create your LVGL UI under root_page
-    lv_obj_t *label = lv_label_create(env_data_simple_screen);
+    lv_obj_t *button = lv_button_create(env_data_simple_screen);
+    lv_obj_center(button);
+
+    lv_obj_t *label = lv_label_create(button);
     lv_label_set_text(label, "Hello from Enviromental Data!");
     lv_obj_center(label);
 
