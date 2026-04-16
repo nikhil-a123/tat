@@ -12,6 +12,8 @@
 
 #include "enviromental_data/enviromental_data_app.h"
 
+LV_FONT_DECLARE(roboto_extra_bold_72);
+
 LOG_MODULE_REGISTER(env_data_simple_screen);
 
 static lv_obj_t *env_data_simple_screen = NULL;
@@ -60,6 +62,7 @@ void env_data_simple_screen_show(lv_obj_t *parent)
 
     lv_obj_t *co2_button = lv_button_create(env_data_simple_screen);
     lv_obj_t *co2_label = lv_label_create(co2_button);
+    lv_obj_set_style_text_font(co2_label, &roboto_extra_bold_72, LV_PART_MAIN);
     lv_label_set_text(co2_label, "1234");
     lv_obj_center(co2_label);
 
