@@ -30,6 +30,9 @@
 #include "tat_ui_controller.h"
 #include "tat_ui.h"
 
+// Declare external fonts
+LV_FONT_DECLARE(roboto_medium_16);
+
 //static void run_input_work(struct k_work *item);
 
 /* static struct input_worker_item_t {
@@ -228,7 +231,8 @@ int tat_ui_controller_init(void)
 {
     root_screen = lv_screen_active();
 
-    lv_obj_set_style_bg_color(root_screen, tat_color_black(), LV_PART_MAIN | LV_STATE_DEFAULT);
+    // Set roboto as default text font
+    lv_obj_set_style_text_font(root_screen, &roboto_medium_16, LV_PART_MAIN);
 
     /* Associate the user input keys with the widget group */
     keys_indev = lvgl_input_get_indev(keys);
