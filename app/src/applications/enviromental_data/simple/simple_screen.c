@@ -16,20 +16,75 @@ LOG_MODULE_REGISTER(env_data_simple_screen);
 
 static lv_obj_t *env_data_simple_screen = NULL;
 
+/* Sharp LS027 display is 400x240px */
+
+/* 6 columns with 66-px width */
+static int32_t column_dsc[] =   {LV_GRID_FR(1), LV_GRID_FR(1), LV_GRID_FR(1), 
+                                 LV_GRID_FR(1), LV_GRID_FR(1), LV_GRID_FR(1),
+                                 LV_GRID_TEMPLATE_LAST};
+
+/* 6 40-px tall rows */
+static int32_t row_dsc[] = {LV_GRID_FR(1), LV_GRID_FR(1), LV_GRID_FR(1), 
+                            LV_GRID_FR(1), LV_GRID_FR(1), LV_GRID_FR(1), 
+                            LV_GRID_TEMPLATE_LAST};
+
 void env_data_simple_screen_show(lv_obj_t *parent)
 {
     // Create a child container under root, this is your app's root element
     env_data_simple_screen = lv_obj_create(parent);
     lv_obj_set_size(env_data_simple_screen, LV_PCT(100), LV_PCT(100));
     lv_obj_set_style_border_width(env_data_simple_screen, 0, LV_PART_MAIN);
+    lv_obj_set_grid_dsc_array(env_data_simple_screen, column_dsc, row_dsc);
 
-    // Create your LVGL UI under root_page
-    lv_obj_t *button = lv_button_create(env_data_simple_screen);
-    lv_obj_center(button);
+    // Create LVGL UI under env_data_simple_screen
 
-    lv_obj_t *label = lv_label_create(button);
-    lv_label_set_text(label, "Hello from Enviromental Data!");
-    lv_obj_center(label);
+    // Create top row of data
+    lv_obj_t *temp_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *temp_label = lv_label_create(temp_button);
+    lv_label_set_text(temp_label, "20.0°C");
+    lv_obj_center(temp_label);
+
+    lv_obj_t *pressure_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *pressure_label = lv_label_create(pressure_button);
+    lv_label_set_text(pressure_label, "101.3kPa");
+    lv_obj_center(pressure_label);
+
+    lv_obj_t *humidity_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *humidity_label = lv_label_create(humidity_button);
+    lv_label_set_text(humidity_label, "50%");
+    lv_obj_center(humidity_label);
+
+    lv_obj_set_grid_cell(temp_button, LV_GRID_ALIGN_STRETCH, 0, 2, LV_GRID_ALIGN_STRETCH, 0, 1);
+    lv_obj_set_grid_cell(pressure_button, LV_GRID_ALIGN_STRETCH, 2, 2, LV_GRID_ALIGN_STRETCH, 0, 1);
+    lv_obj_set_grid_cell(humidity_button, LV_GRID_ALIGN_STRETCH, 4, 2, LV_GRID_ALIGN_STRETCH, 0, 1);
+
+    lv_obj_t *co2_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *co2_label = lv_label_create(co2_button);
+    lv_label_set_text(co2_label, "1234");
+    lv_obj_center(co2_label);
+
+    lv_obj_set_grid_cell(co2_button, LV_GRID_ALIGN_STRETCH, 0, 6, LV_GRID_ALIGN_STRETCH, 1, 3);
+
+    lv_obj_t *battery_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *battery_label = lv_label_create(battery_button);
+    lv_label_set_text(battery_label, "100%");
+    lv_obj_center(battery_label);
+
+    lv_obj_t *ppm_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *ppm_label = lv_label_create(ppm_button);
+    lv_label_set_text(ppm_label, "CO2 ppm");
+    lv_obj_center(ppm_label);
+
+    lv_obj_set_grid_cell(battery_button, LV_GRID_ALIGN_STRETCH, 0, 2, LV_GRID_ALIGN_STRETCH, 4, 1);
+    lv_obj_set_grid_cell(ppm_button, LV_GRID_ALIGN_STRETCH, 4, 2, LV_GRID_ALIGN_STRETCH, 4, 1);
+
+    lv_obj_t *low_co2_conc_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *med_co2_conc_button = lv_button_create(env_data_simple_screen);
+    lv_obj_t *high_co2_conc_button = lv_button_create(env_data_simple_screen);
+
+    lv_obj_set_grid_cell(low_co2_conc_button, LV_GRID_ALIGN_STRETCH, 0, 2, LV_GRID_ALIGN_STRETCH, 5, 1);
+    lv_obj_set_grid_cell(med_co2_conc_button, LV_GRID_ALIGN_STRETCH, 2, 2, LV_GRID_ALIGN_STRETCH, 5, 1);
+    lv_obj_set_grid_cell(high_co2_conc_button, LV_GRID_ALIGN_STRETCH, 4, 2, LV_GRID_ALIGN_STRETCH, 5, 1);
 
     LOG_INF("simple screen show!");
 }
