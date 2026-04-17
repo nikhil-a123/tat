@@ -4,7 +4,7 @@
 #include "tat_periodic_event.h"
 #include "tat_test_sensor.h"
 
-LOG_MODULE_REGISTER(tat_test_sensor);
+LOG_MODULE_REGISTER(tat_test_sensor, CONFIG_TAT_SENSORS_LOG_LEVEL);
 
 static void zbus_periodic_10s_callback(const struct zbus_channel *chan);
 

@@ -28,7 +28,7 @@
 #include "tat_app_manager.h"
 //#include "events/activity_event.h"
 
-LOG_MODULE_REGISTER(app_manager, LOG_LEVEL_INF);
+LOG_MODULE_REGISTER(app_manager, CONFIG_TAT_MANAGERS_LOG_LEVEL);
 
 #define MAX_APPS        8
 #define INVALID_APP_ID  0xFF

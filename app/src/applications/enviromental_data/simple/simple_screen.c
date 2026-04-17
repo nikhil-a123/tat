@@ -14,7 +14,7 @@
 
 LV_FONT_DECLARE(roboto_extra_bold_72);
 
-LOG_MODULE_REGISTER(env_data_simple_screen);
+LOG_MODULE_REGISTER(env_data_simple_screen, CONFIG_TAT_APPLICATIONS_LOG_LEVEL);
 
 static lv_obj_t *env_data_simple_screen = NULL;
 

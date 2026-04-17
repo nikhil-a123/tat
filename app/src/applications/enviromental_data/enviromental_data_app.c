@@ -53,7 +53,7 @@ static struct k_work_sync cancel_work_sync;
 
 static void general_work(struct k_work *item);
 
-LOG_MODULE_REGISTER(enviromental_data_app);
+LOG_MODULE_REGISTER(enviromental_data_app, CONFIG_TAT_APPLICATIONS_LOG_LEVEL);
 
 
 //#define NORMAL_TIME_UPDATE_INTERVAL   K_MSEC(1000)

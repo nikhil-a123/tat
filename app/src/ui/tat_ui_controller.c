@@ -71,7 +71,7 @@ static void on_onboarding_done(void); */
 
 INPUT_CALLBACK_DEFINE(NULL, on_input_subsys_callback, NULL);
 
-LOG_MODULE_REGISTER(tat_ui_controller);
+LOG_MODULE_REGISTER(tat_ui_controller, CONFIG_TAT_UI_LOG_LEVEL);
 
 /* static void run_input_work(struct k_work *item)
 {

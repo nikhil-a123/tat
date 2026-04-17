@@ -1,0 +1,15 @@
+# ZSWatch board configuration
+
+# Copyright (c) 2025 ZSWatch Project
+# SPDX-License-Identifier: Apache-2.0
+
+menu "Zephyr Kernel"
+    source "Kconfig.zephyr"
+endmenu
+
+menu "Tiny Ambient Tracker"
+    rsource "src/applications/Kconfig"
+    rsource "src/managers/Kconfig"
+    rsource "src/sensors/Kconfig"
+    rsource "src/ui/Kconfig"
+endmenu
