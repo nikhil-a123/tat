@@ -20,6 +20,23 @@ ZBUS_CHAN_DECLARE(co2_data_chan);
 ZBUS_CHAN_DECLARE(periodic_event_10s_chan);
 ZBUS_LISTENER_DEFINE(co2_sensor_periodic_slow_lis, zbus_periodic_10s_callback);
 
+/*
+ *  To get the STCC4 to read at optimal accuracy, these steps are followed:
+ *      - Prompt the user to take the device outside and press a button when done so
+ *      - Turn on the sensor, execute the perform conditioning command and wait 22 seconds
+ *        for the conditioning to finish
+ *      - Operate the sensor in continuous mode for 30 seconds, then stop the measurement
+ *      - Execute the perform forced recalibration command with the target CO2 level set
+ *        as the standard outside ambient CO2 concentration of ~430ppm
+ *        (note the 430ppm value is rising over time, maybe make this value a settable option?)
+ *      - Calibration is finished and the sensor is considered calibrated
+ * 
+ *  Note that the STCC4 uses an automatic self-calibration feature where the device is expected
+ *  to be subjected to ambient CO2 levels at least once a week. We should prompt the user to
+ *  calibrate the sensor again after a certain amount of time just to make sure, but this can
+ *  be implemented at a later date.
+*/
+
 static void zbus_periodic_10s_callback(const struct zbus_channel *chan)
 {
     LOG_INF("Read CO2 sensor!");
