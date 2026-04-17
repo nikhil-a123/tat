@@ -50,8 +50,6 @@ static struct input_event last_input_event; */
 
 #define KEYS_NODE DT_CHOSEN(zephyr_display)
 
-static const struct device *display = DEVICE_DT_GET_OR_NULL(DISPLAY_NODE);
-
 static const struct device *const keys = DEVICE_DT_GET(DT_COMPAT_GET_ANY_STATUS_OKAY(zephyr_lvgl_keypad_input));
 
 //static struct input_event last_input_event;
