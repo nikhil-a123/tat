@@ -60,7 +60,7 @@ static void zbus_periodic_10s_callback(const struct zbus_channel *chan)
         .rel_humidity_pct = humid
     };
 
-    LOG_INF("CO2 concentration: %d ppm, Temperature: %f C, Humidity: %f%", conc, (float)temp, (float)humid);
+    //LOG_INF("CO2 concentration: %d ppm, Temperature: %f C, Humidity: %f%", conc, (float)temp, (float)humid);
     zbus_chan_pub(&co2_data_chan, &evt, K_MSEC(250));
 }
 

@@ -60,14 +60,14 @@ static lv_indev_t *keys_indev;
 //static uint8_t last_pressed;
 
 //static void encoder_read(lv_indev_t *indev, lv_indev_data_t *data);
-static void on_input_subsys_callback(struct input_event *evt, void *user_data);
+/* static void on_input_subsys_callback(struct input_event *evt, void *user_data); */
 /* static void on_watchface_app_event_callback(watchface_app_evt_t evt); */
 /* static void async_turn_off_buttons_allocation(void *unused);
 static void open_application_manager_page(void *app_name);
 static void on_application_manager_close(void);
 static void on_onboarding_done(void); */
 
-INPUT_CALLBACK_DEFINE(NULL, on_input_subsys_callback, NULL);
+/* INPUT_CALLBACK_DEFINE(NULL, on_input_subsys_callback, NULL); */
 
 LOG_MODULE_REGISTER(tat_ui_controller, CONFIG_TAT_UI_LOG_LEVEL);
 
@@ -205,25 +205,25 @@ LOG_MODULE_REGISTER(tat_ui_controller, CONFIG_TAT_UI_LOG_LEVEL);
     }
 } */
 
-static void on_input_subsys_callback(struct input_event *evt, void *user_data)
+/* static void on_input_subsys_callback(struct input_event *evt, void *user_data)
 {
     LOG_INF("Input event received: type=%u, code=%u, value=%d", evt->type, evt->code, evt->value);
 
     // The following events are ignored (will block a wakeup of the display):
     //  - Generic touch events (INPUT_BTN_TOUCH, INPUT_ABS_X, INPUT_ABS_Y)
     //  - Raw button codes before longpress processing (INPUT_KEY_KP0, INPUT_KEY_KP1)
-/*     if ((evt->code == INPUT_ABS_X) || (evt->code == INPUT_ABS_Y) || (evt->code == INPUT_BTN_TOUCH) ||
+    if ((evt->code == INPUT_ABS_X) || (evt->code == INPUT_ABS_Y) || (evt->code == INPUT_BTN_TOUCH) ||
         (evt->code == INPUT_KEY_KP0) || (evt->code == INPUT_KEY_KP1) ||
 #ifdef CONFIG_APPLICATIONS_USE_VOICE_MEMO
         (evt->code == INPUT_KEY_F1) ||
 #endif
         ((evt->code != INPUT_EV_DEVICE) && (evt->value == 1))) {
         return;
-    } */
+    }
 
     //input_worker_item.event = *evt;
     //k_work_submit(&input_worker_item.work);
-}
+} */
 
 int tat_ui_controller_init(void)
 {
