@@ -34,26 +34,33 @@ typedef enum {
     TAT_APP_CATEGORY_INVALID
 } tat_app_category_t;
 
+typedef struct {
+    const char *name;
+    tat_app_category_t category;
+    //const void *icon;
+} tat_app_folder_info_t;
+
+typedef enum {
+    TAT_APP_STATE_STOPPED,      // App is not running
+    TAT_APP_STATE_UI_VISIBLE,   // App UI is visible and safe to use
+    //TAT_APP_STATE_UI_HIDDEN     // App is running but UI is not safe to call
+} tat_app_state_t;
+
 typedef struct application_t {
     application_start_fn            start_func;
     application_stop_fn             stop_func;
     char                            *name;
     tat_app_category_t              category;
+    tat_app_state_t                 current_state;
 } application_t;
 
-/** @brief
- *  @param app
-*/
+int tat_app_manager_show(lv_obj_t *root, lv_group_t *group, char *app_name);
+void tat_app_manager_delete(void);
 void tat_app_manager_add_application(application_t *app);
-
-/** @brief Get number of registrated applications
-*/
+void tat_app_manager_exit_app(void);
+void tat_app_manager_app_close_request(application_t *app);
 int tat_app_manager_get_num_apps(void);
-
-/** @brief Get application by index
- *  @param index Index of the application (0 to num_apps-1)
- *  @return Pointer to application or NULL if index is invalid
- */
 application_t *tat_app_manager_get_app(int index);
+tat_app_state_t tat_app_manager_get_app_state(application_t *app);
 
 #endif /* TAT_APP_MANAGER_H_ */

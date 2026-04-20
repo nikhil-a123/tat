@@ -26,7 +26,7 @@
 #include <lvgl_input_device.h>
 
 #include "enviromental_data/enviromental_data_app.h"
-//#include "tat_application_manager.h"
+#include "tat_app_manager.h"
 #include "tat_ui_controller.h"
 #include "tat_ui.h"
 
@@ -72,6 +72,17 @@ static void run_input_work(struct k_work *item)
     struct input_worker_item_t *container = CONTAINER_OF(item, struct input_worker_item_t, work);
 
     LOG_DBG("Input worker code: %u", container->event.code);
+
+    if (container->event.type == INPUT_EV_KEY) {
+        switch (container->event.code) {
+            case (INPUT_KEY_1): {
+                // Transition to the next application
+                enviromental_data_app_stop();
+                tat_app_manager_show(root_screen, input_group, "Hello World");
+                break;
+            }
+        }
+    }
 
     // Handled by LVGL
     if (container->event.type == INPUT_EV_KEY) {

@@ -10,13 +10,13 @@ project(app)
 
 add_subdirectory(src/applications)
 add_subdirectory(src/events)
-#add_subdirectory(src/managers)
+add_subdirectory(src/managers)
 add_subdirectory(src/sensors)
 add_subdirectory(src/ui)
 
 include_directories(src/applications)
 include_directories(src/events)
-#include_directories(src/managers)
+include_directories(src/managers)
 include_directories(src/sensors)
 include_directories(src/ui)
 

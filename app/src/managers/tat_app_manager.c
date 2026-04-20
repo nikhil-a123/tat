@@ -30,9 +30,11 @@
 
 LOG_MODULE_REGISTER(app_manager, CONFIG_TAT_MANAGERS_LOG_LEVEL);
 
-#define MAX_APPS        8
+#define MAX_APPS        32
 #define INVALID_APP_ID  0xFF
 
+//static void draw_app_and_folder_view(void);
+static void on_app_selected(application_t *app);
 static void async_app_start(lv_timer_t *timer);
 static void async_app_close(lv_timer_t *timer);
 
@@ -42,9 +44,13 @@ static uint8_t current_app;
 
 static lv_obj_t *root_obj;
 static lv_group_t *group_obj;
+static lv_timer_t *async_app_start_timer;
+static lv_timer_t *async_app_close_timer;
+
+static bool app_launch_only;
 
 // TODO: Add icons for app folders
-/* static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
+static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
     [TAT_APP_CATEGORY_ROOT] = {
         .name = "Root",
         .category = TAT_APP_CATEGORY_ROOT
@@ -69,54 +75,98 @@ static lv_group_t *group_obj;
         .name = "Other",
         .category = TAT_APP_CATEGORY_OTHER
     },
-}; */
+};
 
-/* static void async_app_start(lv_timer_t *timer)
+static void on_app_selected(application_t *app)
+{
+    if (app == NULL) {
+        return;
+    }
+
+    for (int i = 0; i < num_apps; i++) {
+        if (apps[i] == app) {
+            current_app = i;
+
+            if (async_app_start_timer == NULL) {
+                async_app_start_timer = lv_timer_create(async_app_start, 50, NULL);
+                lv_timer_set_repeat_count(async_app_start_timer, 1);
+            }
+            return;
+        }
+    }
+
+    LOG_WRN("Selected app not found in registry");
+}
+
+static void async_app_start(lv_timer_t *timer)
 {
     async_app_start_timer = NULL;
     LOG_DBG("Start %d", current_app);
-    delete_root_object();
+    //delete_root_object();
 
     application_t *app = apps[current_app];
-    __ASSERT(screen_is_on, "Screen expected to be on when starting app.");
-    app->current_state = ZSW_APP_STATE_UI_VISIBLE;
-
+    app->current_state = TAT_APP_STATE_UI_VISIBLE;
     app->start_func(root_obj, group_obj);
-} */
+}
 
-/* static void async_app_close(lv_timer_t *timer)
+static void async_app_close(lv_timer_t *timer)
 {
     if (current_app < num_apps) {
         LOG_DBG("Stop %d", current_app);
-        bool back_button_consumed = false;
-        if (apps[current_app]->back_func) {
-            back_button_consumed = apps[current_app]->back_func();
-        }
 
-        if (!back_button_consumed) {
-            apps[current_app]->current_state = ZSW_APP_STATE_STOPPED;
-            apps[current_app]->stop_func();
-            current_app = INVALID_APP_ID;
-            if (app_launch_only) {
-                zsw_app_manager_delete();
-                close_cb_func();
-            } else {
-                draw_app_and_folder_view();
-            }
-        }
-    } else {
-        // No app running, check if we are in a folder
-        if (app_picker_root != NULL && app_picker_ui_is_folder_open()) {
-            LOG_DBG("Close folder in picker");
-            app_picker_ui_close_folder();
-        } else {
-            LOG_DBG("Exit application manager");
-            zsw_app_manager_delete();
-            close_cb_func();
-        }
+        apps[current_app]->current_state = TAT_APP_STATE_STOPPED;
+        apps[current_app]->stop_func();
+        current_app = INVALID_APP_ID;
+        tat_app_manager_delete();
     }
     async_app_close_timer = NULL;
-} */
+}
+
+int tat_app_manager_show(lv_obj_t *root, lv_group_t *group, char *app_name)
+{
+    int err = 0;
+    bool app_found;
+    //close_cb_func = close_cb;
+    root_obj = root;
+    group_obj = group;
+    app_launch_only = false;
+
+    if (app_name == NULL) {
+        //draw_app_and_folder_view();
+        LOG_INF("No app name, should open app menu...");
+    } else {
+        app_found = false;
+        for (int i = 0; i < num_apps; i++) {
+            if (strcmp(apps[i]->name, app_name) == 0) {
+                app_found = true;
+                app_launch_only = true;
+                current_app = i;
+                if (async_app_start_timer == NULL) {
+                    async_app_start_timer = lv_timer_create(async_app_start, 1,  NULL);
+                    lv_timer_set_repeat_count(async_app_start_timer, 1);
+                }
+                break;
+            }
+        }
+    }
+
+    if (app_name != NULL && !app_found) {
+        LOG_INF("Couldn't find app!");
+        err = -ENOENT;
+    }
+
+    return err;
+}
+
+void tat_app_manager_delete(void)
+{
+    if (current_app < num_apps) {
+        LOG_DBG("Stop force %d", current_app);
+        apps[current_app]->current_state = TAT_APP_STATE_STOPPED;
+        apps[current_app]->stop_func();
+    }
+    //delete_root_object();
+}
 
 void tat_app_manager_add_application(application_t *app)
 {
@@ -125,6 +175,21 @@ void tat_app_manager_add_application(application_t *app)
     apps[num_apps] = app;
     LOG_INF("Added application %d", num_apps);
     num_apps++;
+}
+
+void tat_app_manager_exit_app(void)
+{
+    if (async_app_close_timer != NULL) {
+        return;
+    }
+    async_app_close_timer = lv_timer_create(async_app_close, 500,  NULL);
+    lv_timer_set_repeat_count(async_app_close_timer, 1);
+}
+
+void tat_app_manager_app_close_request(application_t *app)
+{
+    LOG_DBG("tat_app_manager_app_close_request");
+    tat_app_manager_exit_app();
 }
 
 int tat_app_manager_get_num_apps(void)
@@ -140,11 +205,18 @@ application_t *tat_app_manager_get_app(int index)
     return apps[index];
 }
 
+tat_app_state_t tat_app_manager_get_app_state(application_t *app)
+{
+    __ASSERT_NO_MSG(app != NULL);
+    return app->current_state;
+}
+
 static int app_manager_init(void)
 {
     memset(apps, 0, sizeof(apps));
     num_apps = 0;
     current_app = INVALID_APP_ID;
+    async_app_start_timer = NULL;
     LOG_INF("Initializing application manager!");
 
     return 0;
