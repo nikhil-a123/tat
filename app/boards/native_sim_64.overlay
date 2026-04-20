@@ -31,7 +31,7 @@
             zephyr,code = <INPUT_KEY_1>;
         };
         key2: key2 {
-            label = "backspace";
+            label = "back";
             gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
             zephyr,code = <INPUT_KEY_2>;
         };
@@ -45,20 +45,6 @@
             gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
             zephyr,code = <INPUT_KEY_4>;
         };
-    };
-};
-
-/ {
-    keypad {
-            compatible = "zephyr,lvgl-keypad-input";
-            input = <&buttons>;
-            // Mapping:
-            // Enter        -> LV_KEY_ENTER
-            // Backspace    -> LV_KEY_ESC
-            // Up           -> LV_KEY_NEXT
-            // Down         -> LV_KEY_PREV
-            input-codes = <INPUT_KEY_1 INPUT_KEY_2 INPUT_KEY_3 INPUT_KEY_4>;
-            lvgl-codes = <LV_KEY_ENTER LV_KEY_ESC LV_KEY_NEXT LV_KEY_PREV>;
     };
 };
 
