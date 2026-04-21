@@ -86,8 +86,10 @@ static void run_input_work(struct k_work *item)
     if (container->event.type == INPUT_EV_KEY) {
         switch (container->event.code) {
             case INPUT_KEY_1: 
-                // Open app menu
-                open_appplication(NULL);
+                // If we pressed then released, open app menu
+                if (container->event.value == 0) {
+                    lv_async_call(open_appplication, NULL);
+                }
                 break;
         }
     }

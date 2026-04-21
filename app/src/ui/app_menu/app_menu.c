@@ -137,5 +137,29 @@ void app_menu_delete(void)
         menu_root = NULL;
     }
 
+    app_list = NULL;
+    memset(list_buttons, 0, sizeof(list_buttons));
+    memset(list_labels, 0, sizeof(list_labels));
+    memset(button_items, 0, sizeof(button_items));
+
+    num_menu_items = 0;
+
     app_selected_cb = NULL;
+}
+
+void app_menu_on_app_clicked(lv_event_t *e)
+{
+    lv_obj_t *target = lv_event_get_target(e);
+    int button_index = (int)(intptr_t)lv_obj_get_user_data(target);
+
+    if (button_index < 0 || button_index >= NUM_SLOTS || button_items[button_index] == NULL) {
+        LOG_WRN("Click on invalid/empty button %d", button_index);
+        return;
+    }
+
+    menu_item_t *item = button_items[button_index];
+    LOG_DBG("App clicked: %s (slot %d)", item->app->name, button_index);
+    if (app_selected_cb) {
+        app_selected_cb(item->app);
+    }
 }

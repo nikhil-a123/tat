@@ -15,4 +15,6 @@ lv_obj_t *app_menu_create(lv_obj_t *root, lv_group_t *group,
 
 void app_menu_delete(void);
 
+void app_menu_on_app_clicked(lv_event_t *e);
+
 #endif /* APP_MENU_H_ */

@@ -23,7 +23,7 @@
 / {
     buttons: buttons {
         compatible = "gpio-keys";
-        polling-mode; // Use polling, as none polling generates at boot buttons releases for each button. Which is not desired. Maybe a bug in Zephyr?
+        //polling-mode; // Use polling, as none polling generates at boot buttons releases for each button. Which is not desired. Maybe a bug in Zephyr?
 
         key1: key1 {
             label = "enter";

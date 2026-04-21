@@ -1,4 +1,5 @@
 #include "app_menu_ui.h"
+#include "app_menu.h"
 
 lv_obj_t *app_menu_ui_create(lv_obj_t *root)
 {
@@ -15,21 +16,27 @@ lv_obj_t *app_menu_ui_create(lv_obj_t *root)
     // Create 6 buttons in the list
     lv_obj_t *button0 = lv_list_add_button(app_list, NULL, "Button 0");
     lv_obj_set_name(button0, "button0");
+    lv_obj_add_event_cb(button0, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button1 = lv_list_add_button(app_list, NULL, "Button 1");
     lv_obj_set_name(button1, "button1");
+    lv_obj_add_event_cb(button1, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button2 = lv_list_add_button(app_list, NULL, "Button 2");
     lv_obj_set_name(button2, "button2");
+    lv_obj_add_event_cb(button2, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button3 = lv_list_add_button(app_list, NULL, "Button 3");
     lv_obj_set_name(button3, "button3");
+    lv_obj_add_event_cb(button3, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button4 = lv_list_add_button(app_list, NULL, "Button 4");
     lv_obj_set_name(button4, "button4");
+    lv_obj_add_event_cb(button4, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button5 = lv_list_add_button(app_list, NULL, "Button 5");
     lv_obj_set_name(button5, "button5");
+    lv_obj_add_event_cb(button5, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     return menu_ui_root;
 }
