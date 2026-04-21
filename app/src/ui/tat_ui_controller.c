@@ -118,11 +118,11 @@ static void encoder_read(lv_indev_t *indev, lv_indev_data_t *data)
         data->state = LV_INDEV_STATE_PR;
         last_pressed = 2;
     } else if (last_input_event.code == INPUT_KEY_3) {
-        data->key = LV_KEY_UP;
+        data->key = LV_KEY_LEFT;
         data->state = LV_INDEV_STATE_PR;
         last_pressed = 3;
     } else if (last_input_event.code == INPUT_KEY_4) {
-        data->key = LV_KEY_DOWN;
+        data->key = LV_KEY_RIGHT;
         data->state = LV_INDEV_STATE_PR;
         last_pressed = 4;
     } else {
