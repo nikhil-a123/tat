@@ -44,9 +44,16 @@ input_worker_item = {
     .work = Z_WORK_INITIALIZER(run_input_work),
 };
 
+typedef enum ui_state {
+    INIT_STATE,
+    ENVIROMENTAL_DATA_STATE,
+    APP_MENU_STATE,
+} ui_state_t;
+
 static struct input_event last_input_event;
 
 static bool is_buttons_for_lvgl = false;
+static ui_state_t ui_state = INIT_STATE;
 
 #define KEYS_NODE DT_CHOSEN(zephyr_display)
 
@@ -57,6 +64,9 @@ static uint8_t last_pressed;
 
 static void encoder_read(lv_indev_t *indev, lv_indev_data_t *data);
 static void on_input_subsys_callback(struct input_event *evt, void *user_data);
+static void open_appplication(void *app_name);
+static void on_app_menu_close(void);
+static void async_turn_off_buttons_allocation(void *unused);
 /* static void on_watchface_app_event_callback(watchface_app_evt_t evt); */
 /* static void async_turn_off_buttons_allocation(void *unused);
 static void open_application_manager_page(void *app_name);
@@ -75,12 +85,10 @@ static void run_input_work(struct k_work *item)
 
     if (container->event.type == INPUT_EV_KEY) {
         switch (container->event.code) {
-            case (INPUT_KEY_1): {
-                // Transition to the next application
-                enviromental_data_app_stop();
-                tat_app_manager_show(root_screen, input_group, "Hello World");
+            case INPUT_KEY_1: 
+                // Open app menu
+                open_appplication(NULL);
                 break;
-            }
         }
     }
 
@@ -156,6 +164,36 @@ static void on_input_subsys_callback(struct input_event *evt, void *user_data)
     k_work_submit(&input_worker_item.work);
 }
 
+// Functions for opening applications
+// Pass NULL to open the app menu screen so the user can manually
+// pick an app to open, or pass an applications name to directly
+// open the app without going through the app menu
+static void open_appplication(void *app_name)
+{
+    if (ui_state != ENVIROMENTAL_DATA_STATE) {
+        return;
+    }
+    // Stop the enviromental data screen and tell LVGL to use the button inputs
+    enviromental_data_app_stop();
+    is_buttons_for_lvgl = true;
+    ui_state = APP_MENU_STATE;
+    tat_app_manager_show(on_app_menu_close, root_screen, input_group, (char *)app_name);
+}
+
+// Callback function executed when the app menu is closed
+static void on_app_menu_close(void)
+{
+    tat_app_manager_delete();
+    ui_state = ENVIROMENTAL_DATA_STATE;
+    enviromental_data_app_start(root_screen, input_group);
+    lv_async_call(async_turn_off_buttons_allocation, NULL);
+}
+
+static void async_turn_off_buttons_allocation(void *unused)
+{
+    is_buttons_for_lvgl = false;
+}
+
 int tat_ui_controller_init(void)
 {
     root_screen = lv_screen_active();
@@ -174,6 +212,7 @@ int tat_ui_controller_init(void)
 
     // Start the enviromental data screen here...
     enviromental_data_app_start(root_screen, input_group);
+    ui_state = ENVIROMENTAL_DATA_STATE;
 
     LOG_INF("UI Controller initialized");
 

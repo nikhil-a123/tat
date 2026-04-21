@@ -24,7 +24,7 @@
 #include <stdint.h>
 
 //#include "ui/zsw_ui.h"
-//#include "ui/app_picker/app_picker_ui.h"
+#include "ui/app_menu/app_menu.h"
 #include "tat_app_manager.h"
 //#include "events/activity_event.h"
 
@@ -37,17 +37,20 @@ LOG_MODULE_REGISTER(app_manager, CONFIG_TAT_MANAGERS_LOG_LEVEL);
 static void on_app_selected(application_t *app);
 static void async_app_start(lv_timer_t *timer);
 static void async_app_close(lv_timer_t *timer);
+static void draw_app_menu(void);
 
 static application_t *apps[MAX_APPS];
 static uint8_t num_apps;
+static uint8_t num_visible_apps;
 static uint8_t current_app;
 
 static lv_obj_t *root_obj;
 static lv_group_t *group_obj;
+static on_app_manager_cb_fn close_cb_func;
+static lv_obj_t *app_menu_root;
+static bool app_launch_only;
 static lv_timer_t *async_app_start_timer;
 static lv_timer_t *async_app_close_timer;
-
-static bool app_launch_only;
 
 // TODO: Add icons for app folders
 static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
@@ -77,6 +80,14 @@ static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
     },
 };
 
+static void delete_root_object(void)
+{
+    if (app_menu_root != NULL) {
+        app_menu_delete();
+        app_menu_root = NULL;
+    }
+}
+
 static void on_app_selected(application_t *app)
 {
     if (app == NULL) {
@@ -102,10 +113,11 @@ static void async_app_start(lv_timer_t *timer)
 {
     async_app_start_timer = NULL;
     LOG_DBG("Start %d", current_app);
-    //delete_root_object();
+    delete_root_object();
 
     application_t *app = apps[current_app];
     app->current_state = TAT_APP_STATE_UI_VISIBLE;
+
     app->start_func(root_obj, group_obj);
 }
 
@@ -117,23 +129,36 @@ static void async_app_close(lv_timer_t *timer)
         apps[current_app]->current_state = TAT_APP_STATE_STOPPED;
         apps[current_app]->stop_func();
         current_app = INVALID_APP_ID;
-        tat_app_manager_delete();
+        if (app_launch_only) {
+            // if we skipped the app menu, delete this
+            tat_app_manager_delete();
+        } else {
+            // go back to app menu
+            draw_app_menu();
+        }
     }
     async_app_close_timer = NULL;
 }
 
-int tat_app_manager_show(lv_obj_t *root, lv_group_t *group, char *app_name)
+static void draw_app_menu(void)
+{
+    /* Use new circular app picker UI */
+    app_menu_root = app_menu_create(root_obj, group_obj, on_app_selected);
+
+    LOG_DBG("Created app menu UI");
+}
+
+int tat_app_manager_show(on_app_manager_cb_fn close_cb, lv_obj_t *root, lv_group_t *group, char *app_name)
 {
     int err = 0;
     bool app_found;
-    //close_cb_func = close_cb;
+    close_cb_func = close_cb;
     root_obj = root;
     group_obj = group;
     app_launch_only = false;
 
     if (app_name == NULL) {
-        //draw_app_and_folder_view();
-        LOG_INF("No app name, should open app menu...");
+        draw_app_menu();
     } else {
         app_found = false;
         for (int i = 0; i < num_apps; i++) {
@@ -165,16 +190,21 @@ void tat_app_manager_delete(void)
         apps[current_app]->current_state = TAT_APP_STATE_STOPPED;
         apps[current_app]->stop_func();
     }
-    //delete_root_object();
+    delete_root_object();
 }
 
 void tat_app_manager_add_application(application_t *app)
 {
     __ASSERT_NO_MSG(num_apps < MAX_APPS);
 
+    app->current_state = TAT_APP_STATE_STOPPED;
     apps[num_apps] = app;
     LOG_INF("Added application %d", num_apps);
     num_apps++;
+    if (!app->hidden) {
+        app->private_list_index = num_visible_apps;
+        num_visible_apps++;
+    }
 }
 
 void tat_app_manager_exit_app(void)

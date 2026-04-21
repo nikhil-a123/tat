@@ -23,6 +23,8 @@
 typedef void(*application_start_fn)(lv_obj_t *root, lv_group_t *group);
 typedef void(*application_stop_fn)(void);
 
+typedef void(*on_app_manager_cb_fn)(void);
+
 typedef enum {
     TAT_APP_CATEGORY_ROOT = 0,
     TAT_APP_CATEGORY_TOOLS,
@@ -50,11 +52,13 @@ typedef struct application_t {
     application_start_fn            start_func;
     application_stop_fn             stop_func;
     char                            *name;
+    bool                            hidden;
     tat_app_category_t              category;
+    uint8_t                         private_list_index;
     tat_app_state_t                 current_state;
 } application_t;
 
-int tat_app_manager_show(lv_obj_t *root, lv_group_t *group, char *app_name);
+int tat_app_manager_show(on_app_manager_cb_fn close_cb, lv_obj_t *root, lv_group_t *group, char *app_name);
 void tat_app_manager_delete(void);
 void tat_app_manager_add_application(application_t *app);
 void tat_app_manager_exit_app(void);

@@ -21,7 +21,7 @@
 typedef enum {
     TAT_UI_STATE_INIT = 0,
     TAT_UI_STATE_ENVIROMENTAL_DATA,
-    TAT_UI_STATE_APP_MANAGER,
+    TAT_UI_STATE_APP_MENU,
 } tat_ui_state_t;
 
 int tat_ui_controller_init();

@@ -14,12 +14,15 @@ add_subdirectory(src/managers)
 add_subdirectory(src/sensors)
 add_subdirectory(src/ui)
 
-include_directories(src/applications)
-include_directories(src/events)
-include_directories(src/managers)
-include_directories(src/sensors)
+include_directories(src)
 include_directories(src/ui)
+include_directories(src/applications)
+include_directories(src/managers)
+include_directories(src/events)
+include_directories(src/sensors)
 
 target_sources(app PRIVATE 
     src/main.c
+    src/ui/app_menu/app_menu.c
+    src/ui/app_menu/app_menu_ui.c
 )
