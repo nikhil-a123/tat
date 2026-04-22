@@ -86,10 +86,23 @@ static void run_input_work(struct k_work *item)
     if (container->event.type == INPUT_EV_KEY) {
         switch (container->event.code) {
             case INPUT_KEY_1: 
-                // If we pressed then released, open app menu
-                if (container->event.value == 0) {
+                if (ui_state == ENVIROMENTAL_DATA_STATE && container->event.value == 0) {
                     lv_async_call(open_appplication, NULL);
+                    return;
                 }
+                break;
+            case INPUT_KEY_2:
+                // Always return so back key isn't sent to LVGL directly
+                if (container->event.value == 0) {
+                    // Back key was pressed and released
+                    if (ui_state == APP_MENU_STATE) {
+                        tat_app_manager_exit_app();
+                    }
+                    return;
+                }
+
+                return;
+            default:
                 break;
         }
     }
@@ -113,10 +126,6 @@ static void encoder_read(lv_indev_t *indev, lv_indev_data_t *data)
         data->key = LV_KEY_ENTER;
         data->state = LV_INDEV_STATE_PR;
         last_pressed = 1;
-    } else if (last_input_event.code == INPUT_KEY_2) {
-        data->key = LV_KEY_PREV;
-        data->state = LV_INDEV_STATE_PR;
-        last_pressed = 2;
     } else if (last_input_event.code == INPUT_KEY_3) {
         data->key = LV_KEY_LEFT;
         data->state = LV_INDEV_STATE_PR;
@@ -133,9 +142,6 @@ static void encoder_read(lv_indev_t *indev, lv_indev_data_t *data)
         switch (last_pressed) {
             case 1:
                 data->key = LV_KEY_ENTER;
-                break;
-            case 2:
-                data->key = LV_KEY_PREV;
                 break;
             case 3:
                 data->key = LV_KEY_UP;

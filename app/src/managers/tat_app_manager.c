@@ -136,7 +136,16 @@ static void async_app_close(lv_timer_t *timer)
             // go back to app menu
             draw_app_menu();
         }
+    } else {
+        // No app is running, we are in folder view
+        // Close the folder view and go back to enviromental
+        // data screen
+        if (app_menu_root != NULL) {
+            tat_app_manager_delete();
+            close_cb_func();
+        }
     }
+
     async_app_close_timer = NULL;
 }
 
@@ -209,6 +218,7 @@ void tat_app_manager_add_application(application_t *app)
 
 void tat_app_manager_exit_app(void)
 {
+    LOG_DBG("Exit app called!");
     if (async_app_close_timer != NULL) {
         return;
     }
