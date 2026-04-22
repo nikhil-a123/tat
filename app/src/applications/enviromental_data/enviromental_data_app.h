@@ -60,7 +60,9 @@ typedef struct enviromental_data_ui_api_t {
     void (*show)(lv_obj_t *root_screen);
     void (*remove)(void);
     //void (*set_battery_percent)(int32_t percent, int32_t battery);
-    //void (*set_co2_conc)(int32_t conc);
+    void (*set_co2_conc)(uint32_t conc);
+    void (*set_temperature)(float temp);
+    void (*set_humidity)(float humidity);
     //void (*set_charging)(bool is_charging);
     //void (*ui_invalidate_cached)(void);
     const char *name;

@@ -70,3 +70,34 @@ int tat_co2_sensor_init(void)
 
     return 0;
 }
+
+int tat_co2_sensor_get_co2_ppm(uint32_t *co2_ppm)
+{
+    // Get 1 or -1
+    int32_t dir = 1 + ((sys_rand32_get() % 2) * -2);
+    // Add a number between -20 to 20 to current CO2 concentration
+    conc += ((sys_rand32_get() % 20) * dir);
+
+    *co2_ppm = conc;
+    return 0;
+}
+
+int tat_co2_sensor_get_temperature(float *temperature)
+{
+    // Add a number between -1C to 1C to current temperature
+    int32_t dir = 1 + ((sys_rand32_get() % 2) * -2);
+    temp += ((((float)(sys_rand32_get() % 100)) / 100.0f) * dir);
+
+    *temperature = temp;
+    return 0;
+}
+
+int tat_co2_sensor_get_humidity(float *humidity)
+{
+    // Add a number between -1% to 1% to current humidity
+    int32_t dir = 1 + ((sys_rand32_get() % 2) * -2);
+    humid += ((((float)(sys_rand32_get() % 100)) / 100.0f) * dir);
+
+    *humidity = humid;
+    return 0;
+}

@@ -18,10 +18,12 @@
 #include <zephyr/kernel.h>
 #include <zephyr/init.h>
 #include <zephyr/logging/log.h>
+#include <zephyr/zbus/zbus.h>
 
 #include <lvgl.h>
 #include <stdbool.h>
 
+#include "co2_event.h"
 #include "enviromental_data_app.h"
 
 #define MAX_ENV_SCREENS 8
@@ -52,22 +54,16 @@ static delayed_work_item_t general_work_item;
 static struct k_work_sync cancel_work_sync;
 
 static void general_work(struct k_work *item);
+static void enviromental_data_app_co2_callback(const struct zbus_channel *chan);
+
+ZBUS_CHAN_DECLARE(co2_data_chan);
+ZBUS_LISTENER_DEFINE(enviromental_data_app_listener, enviromental_data_app_co2_callback);
 
 LOG_MODULE_REGISTER(enviromental_data_app, CONFIG_TAT_APPLICATIONS_LOG_LEVEL);
-
-
-//#define NORMAL_TIME_UPDATE_INTERVAL   K_MSEC(1000)
-//#define SMOOTH_TIME_UPDATE_INTERVAL   K_MSEC(50)
-
-//#define WORK_STACK_SIZE 3000
-//#define WORK_PRIORITY   5
-
-//static watchface_app_evt_listener watchface_evt_cb;
 
 static int enviromental_data_app_init(void)
 {
     k_work_init_delayable(&general_work_item.work, general_work);
-    k_work_init_delayable(&clock_work.work, general_work);
     running = false;
     views_created = false;
     LOG_INF("enviromental data app init!");
@@ -96,8 +92,6 @@ void enviromental_data_app_start(lv_obj_t *root_screen, lv_group_t *group)
     //watchface_evt_cb = evt_cb;
     views_created = false;
 
-    //lv_obj_add_event_cb(watchface_root_screen, watchface_gesture_cb, LV_EVENT_GESTURE, NULL);
-
     // Place work on workqueue to open a new enviromental screen
     general_work_item.type = OPEN_SCREEN;
     __ASSERT(0 <= k_work_schedule(&general_work_item.work, K_MSEC(100)), "FAIL schedule");
@@ -107,17 +101,12 @@ void enviromental_data_app_stop(void)
 {
     running = false;
     //is_suspended = false;
-    k_work_cancel_delayable_sync(&clock_work.work, &cancel_work_sync);
     k_work_cancel_delayable_sync(&general_work_item.work, &cancel_work_sync);
+    zbus_chan_rm_obs(&co2_data_chan, &enviromental_data_app_listener, K_MSEC(100));
 
     if (views_created) {
         screens[current_screen_index]->remove();
     }
-
-    // remove screen callback, enable when that's implemented
-/*     if (root_page != NULL && lv_obj_is_valid(root_page)) {
-        lv_obj_remove_event_cb(root_page, watchface_gesture_cb);
-    } */
 
     views_created = false;
     root_page = NULL;
@@ -212,14 +201,11 @@ static void general_work(struct k_work *item)
             //LOG_INF("general work: OPEN_SCREEN");
             // Open a new enviromental data screen
             running = true;
-            // Dropdown
             screens[current_screen_index]->show(root_page);
-            //zsw_watchface_dropdown_ui_add(watchface_root_screen, watchface_evt_cb, zsw_display_control_get_brightness());
             views_created = true;
             refresh_ui();
 
-            // Update clock immediately
-            //__ASSERT(0 <= k_work_schedule(&clock_work.work, K_NO_WAIT), "FAIL clock_work");
+            zbus_chan_add_obs(&co2_data_chan, &enviromental_data_app_listener, K_MSEC(100));
             // Update enviromental data after a delay
             general_work_item.type = UPDATE_ENVIROMENTAL_DATA;
             __ASSERT(0 <= k_work_schedule(&general_work_item.work, K_MSEC(500)), "FAIL schedule");
@@ -243,13 +229,27 @@ static void general_work(struct k_work *item)
         case UPDATE_ENVIROMENTAL_DATA: {
             //LOG_INF("general work: UPDATE_ENVIROMENTAL_DATA");
             // Update the enviromental data
-/*             float pressure = 0.0;
-
-            zsw_pressure_sensor_get_pressure(&pressure);
-            screens[current_screen_index]->set_watch_env_sensors((int)pressure);
-
-            __ASSERT(0 <= k_work_schedule(&date_work.work, SLOW_UPDATE_INTERVAL), "FAIL date_work"); */
+            struct co2_event co2_data = {0};
+            zbus_chan_read(&co2_data_chan, &co2_data, K_NO_WAIT);
+            screens[current_screen_index]->set_co2_conc(co2_data.co2_ppm);
+            screens[current_screen_index]->set_temperature(co2_data.temperature_cel);
+            screens[current_screen_index]->set_humidity(co2_data.rel_humidity_pct);
             break;
+        }
+    }
+}
+
+static void enviromental_data_app_co2_callback(const struct zbus_channel *chan)
+{
+    LOG_INF("CO2 callback!");
+    if (running == true) {
+        const struct co2_event *co2_data;
+        if (&co2_data_chan == chan) {
+            LOG_INF("got the data ok");
+            co2_data = zbus_chan_const_msg(chan);
+            screens[current_screen_index]->set_co2_conc(co2_data->co2_ppm);
+            screens[current_screen_index]->set_temperature(co2_data->temperature_cel);
+            screens[current_screen_index]->set_humidity(co2_data->rel_humidity_pct);
         }
     }
 }
