@@ -13,3 +13,7 @@ build*
 # Zephyr workspace
 /.west
 /external
+
+# Python stuff
+my-venv
+output

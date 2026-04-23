@@ -22,6 +22,7 @@ static app_menu_on_app_selected_cb app_selected_cb;
 
 static lv_obj_t *app_list;
 static lv_obj_t *list_buttons[NUM_SLOTS];
+static lv_obj_t *list_icons[NUM_SLOTS];
 static lv_obj_t *list_labels[NUM_SLOTS];
 
 static menu_item_t menu_items[MAX_MENU_ITEMS];
@@ -49,7 +50,8 @@ static void cache_object_references(void)
 
         if (list_buttons[i] != NULL) {
             // Get reference to the button's label
-            list_labels[i] = lv_obj_get_child(list_buttons[i], 0);
+            list_icons[i] = lv_obj_get_child(list_buttons[i], 0);
+            list_labels[i] = lv_obj_get_child(list_buttons[i], 1);
             // Save the index in the button object
             lv_obj_set_user_data(list_buttons[i], (void *)(intptr_t)i);
         }
@@ -88,9 +90,15 @@ static void populate_slot(int button_index, menu_item_t *item)
         return;
     }
 
+    // There is an item to populate
     lv_obj_remove_flag(list_buttons[button_index], LV_OBJ_FLAG_HIDDEN);
 
     application_t *app = item->app;
+    if (list_icons[button_index] && app->icon) {
+        lv_image_set_src(list_icons[button_index], app->icon);
+        //lv_obj_set_style_image_recolor_opa(list_icons[slot_index], LV_OPA_TRANSP, LV_PART_MAIN);
+    }
+
     if (list_labels[button_index] && app->name) {
         lv_label_set_text(list_labels[button_index], app->name);
     }

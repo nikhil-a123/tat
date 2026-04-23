@@ -11,6 +11,7 @@ project(app)
 add_subdirectory(src/applications)
 add_subdirectory(src/drivers)
 add_subdirectory(src/events)
+add_subdirectory(src/images)
 add_subdirectory(src/managers)
 add_subdirectory(src/sensors)
 add_subdirectory(src/ui)
@@ -28,3 +29,6 @@ target_sources(app PRIVATE
     src/ui/app_menu/app_menu.c
     src/ui/app_menu/app_menu_ui.c
 )
+
+# Needed for compiling images
+add_compile_definitions(LV_LVGL_H_INCLUDE_SIMPLE)

@@ -52,6 +52,7 @@ typedef struct application_t {
     application_start_fn            start_func;
     application_stop_fn             stop_func;
     char                            *name;
+    const void                      *icon;
     bool                            hidden;
     tat_app_category_t              category;
     uint8_t                         private_list_index;

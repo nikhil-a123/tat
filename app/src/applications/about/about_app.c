@@ -10,8 +10,11 @@
 static void about_app_start(lv_obj_t *root, lv_group_t *group);
 static void about_app_stop(void);
 
+LV_IMAGE_DECLARE(material_icons_info_32_black);
+
 static application_t app = {
     .name = "About",
+    .icon = &material_icons_info_32_black,
     .start_func = about_app_start,
     .stop_func = about_app_stop,
     .category = TAT_APP_CATEGORY_SYSTEM,

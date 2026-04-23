@@ -7,6 +7,7 @@
 #include "tat_app_manager.h"
 
 LOG_MODULE_REGISTER(hello_world_app, CONFIG_TAT_APPLICATIONS_LOG_LEVEL);
+LV_IMAGE_DECLARE(material_icons_waving_hand_32_black);
 
 static lv_obj_t *hello_world_screen = NULL;
 
@@ -15,6 +16,7 @@ static void hello_world_app_stop(void);
 
 static application_t app = {
     .name = "Hello World",
+    .icon = &material_icons_waving_hand_32_black,
     .start_func = hello_world_app_start,
     .stop_func = hello_world_app_stop,
     .category = TAT_APP_CATEGORY_SYSTEM
