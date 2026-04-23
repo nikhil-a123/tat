@@ -1,0 +1,1 @@
+target_sources(app PRIVATE tat_display_control.c)

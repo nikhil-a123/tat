@@ -10,55 +10,37 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/shell/shell.h>
 
-#include <zephyr/zbus/zbus.h>
-
-#include "events/periodic_event.h"
-
+#include "drivers/tat_display_control.h"
 #include "sensors/tat_co2_sensor.h"
-
 #include "ui/tat_ui_controller.h"
-
-#include <zephyr/drivers/i2c.h>
-//#include <zephyr/drivers/gpio.h>
-#include <zephyr/drivers/sensor.h>
-#include <zephyr/drivers/display.h>
-
-/* LVGL includes */
-#include <lvgl.h>
-#include <lvgl_mem.h>
-#include <lvgl_zephyr.h>
-
-#define DISPLAY_NODE DT_CHOSEN(zephyr_display)
-
-const struct device *display = DEVICE_DT_GET_OR_NULL(DISPLAY_NODE);
 
 LOG_MODULE_REGISTER(main);
 
-int main(void)
+static void run_init_work(struct k_work *item);
+
+K_WORK_DEFINE(init_work, run_init_work);
+
+// The init code requires a bit of stack.
+// So in order to not increase CONFIG_MAIN_STACK_SIZE and loose
+// this RAM forever, instead re-use the system workqueue for init
+// it has the required amount of stack.
+static void run_init_work(struct k_work *item)
 {
 	int ret;
 
-	if (!device_is_ready(display)) {
-		LOG_ERR("No display found!");
-		return 0;
-	}
+	tat_display_control_init();
+	tat_display_control_sleep_ctrl(true);
 
 	//tat_test_sensor_init();
 	tat_co2_sensor_init();
 
-	lv_timer_handler();
-	ret = display_blanking_off(display);
-	if (ret < 0 && ret != -ENOSYS) {
-		LOG_ERR("Failed to turn blanking off (error %d)", ret);
-		return 0;
-	}
-
 	tat_ui_controller_init();
 	LOG_INF("tat application started!");
+}
 
-	uint32_t sleep_ms;
-	while (1) {
-		sleep_ms = lv_timer_handler();
-		k_msleep(MIN(sleep_ms, INT32_MAX));
-	}
+int main(void)
+{
+	k_work_submit(&init_work);
+	
+	return 0;
 }
