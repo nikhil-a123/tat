@@ -40,7 +40,6 @@ static uint8_t current_screen_index;
 /* For sending work to enviromental screens */
 typedef enum work_type {
     OPEN_SCREEN,
-    UPDATE_CLOCK,
     UPDATE_ENVIROMENTAL_DATA
 } work_type_t;
 
@@ -49,7 +48,6 @@ typedef struct delayed_work_item {
     work_type_t             type;
 } delayed_work_item_t;
 
-static delayed_work_item_t clock_work = { .type = UPDATE_CLOCK };
 static delayed_work_item_t general_work_item;
 static struct k_work_sync cancel_work_sync;
 
@@ -168,25 +166,13 @@ int enviromental_data_app_get_screen_info(int index, const char **name)
 
 static void refresh_ui(void)
 {
-/*     uint32_t steps;
-    watchfaces[watchface_settings.watchface_index]->set_ble_connected(is_connected);
-    watchfaces[watchface_settings.watchface_index]->set_battery_percent(last_batt_evt.percent, last_batt_evt.mV);
-    if (watchfaces[watchface_settings.watchface_index]->set_charging) {
-        watchfaces[watchface_settings.watchface_index]->set_charging(last_batt_evt.is_charging);
-    }
-    zsw_watchface_dropdown_ui_set_battery_info(last_batt_evt.percent, last_batt_evt.is_charging, last_batt_evt.tte,
-                                               last_batt_evt.ttf);
-    if (strlen(last_weather_data.report_text) > 0) {
-        watchfaces[watchface_settings.watchface_index]->set_weather(last_weather_data.temperature_c,
-                                                                    last_weather_data.weather_code);
-    }
-    if (zsw_imu_fetch_num_steps(&steps) == 0) {
-        // TODO: Add calculation for distance and kcal
-        watchfaces[watchface_settings.watchface_index]->set_step(steps, 0, 0);
-    }
-    if (strlen(last_music_info.track_name) > 0) {
-        zsw_watchface_dropdown_ui_set_music_info(last_music_info.track_name, last_music_info.artist);
-    } */
+    // We should request a reading here rather that getting
+    // data from zbus since we might not have gotten data at startup
+    struct co2_event co2_data = {0};
+    zbus_chan_read(&co2_data_chan, &co2_data, K_NO_WAIT);
+    screens[current_screen_index]->set_co2_conc(co2_data.co2_ppm);
+    screens[current_screen_index]->set_temperature(co2_data.temperature_cel);
+    screens[current_screen_index]->set_humidity(co2_data.rel_humidity_pct);
 }
 
 static void general_work(struct k_work *item)
@@ -198,7 +184,7 @@ static void general_work(struct k_work *item)
 
     switch (the_work->type) {
         case OPEN_SCREEN: {
-            //LOG_INF("general work: OPEN_SCREEN");
+            LOG_INF("general work: OPEN_SCREEN");
             // Open a new enviromental data screen
             running = true;
             screens[current_screen_index]->show(root_page);
@@ -209,21 +195,6 @@ static void general_work(struct k_work *item)
             // Update enviromental data after a delay
             general_work_item.type = UPDATE_ENVIROMENTAL_DATA;
             __ASSERT(0 <= k_work_schedule(&general_work_item.work, K_MSEC(500)), "FAIL schedule");
-            break;
-        }
-        case UPDATE_CLOCK: {
-/*             zsw_timeval_t time;
-            zsw_clock_get_time(&time);
-
-            if (watchfaces[watchface_settings.watchface_index]->set_datetime) {
-                // TODO: Add support for AM and 12/24 h mode
-                watchfaces[watchface_settings.watchface_index]->set_datetime(time.tm.tm_wday, time.tm.tm_mday, time.tm.tm_mday,
-                                                                             time.tm.tm_mon,
-                                                                             time.tm.tm_year, time.tm.tm_wday, time.tm.tm_hour, time.tm.tm_min, time.tm.tm_sec, time.tv_usec, false, false);
-            }
-
-            __ASSERT(0 <= k_work_schedule(&clock_work.work,
-                                          watchface_settings.smooth_second_hand ? SMOOTH_TIME_UPDATE_INTERVAL : NORMAL_TIME_UPDATE_INTERVAL), "FAIL clock_work"); */
             break;
         }
         case UPDATE_ENVIROMENTAL_DATA: {
