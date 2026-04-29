@@ -8,7 +8,7 @@ static lv_obj_t *ui_num_applications;
 static lv_obj_t *ui_hw_revision;
 static lv_obj_t *ui_sdk_versions;
 
-LV_FONT_DECLARE(roboto_medium_16);
+LV_FONT_DECLARE(roboto_medium_12);
 
 void about_ui_show(lv_obj_t *root, char *board, char *fw_version, char *sdk_version, int num_apps)
 {
@@ -42,7 +42,7 @@ void about_ui_show(lv_obj_t *root, char *board, char *fw_version, char *sdk_vers
     lv_obj_set_height(ui_hw_revision, LV_SIZE_CONTENT);
     lv_label_set_text_fmt(ui_hw_revision, "%s", board);
     lv_obj_set_style_text_align(ui_hw_revision, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_hw_revision, &roboto_medium_16, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_hw_revision, &roboto_medium_12, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_num_applications = lv_label_create(root_page);
     lv_obj_set_width(ui_num_applications, LV_SIZE_CONTENT);

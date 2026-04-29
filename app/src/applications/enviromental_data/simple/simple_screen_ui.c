@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include "simple_screen_ui.h"
 
-LV_FONT_DECLARE(roboto_medium_16);
-LV_FONT_DECLARE(roboto_extra_bold_72);
+LV_FONT_DECLARE(roboto_medium_12);
+LV_FONT_DECLARE(roboto_extra_bold_64);
 
 LOG_MODULE_REGISTER(env_data_simple_screen, CONFIG_TAT_APPLICATIONS_LOG_LEVEL);
 
@@ -43,7 +43,7 @@ void simple_screen_ui_show(lv_obj_t *parent)
     lv_obj_set_style_border_width(env_data_simple_screen, 0, LV_PART_MAIN);
     lv_obj_set_grid_dsc_array(env_data_simple_screen, column_dsc, row_dsc);
     // Set the default font for the child widgets
-    lv_obj_set_style_text_font(env_data_simple_screen, &roboto_medium_16, LV_PART_MAIN);
+    lv_obj_set_style_text_font(env_data_simple_screen, &roboto_medium_12, LV_PART_MAIN);
 
     // Create LVGL UI under env_data_simple_screen
     // Create top row of data
@@ -66,8 +66,9 @@ void simple_screen_ui_show(lv_obj_t *parent)
     lv_obj_set_style_bg_color(co2_bg, lv_color_white(), LV_PART_MAIN);
 
     co2_label = lv_label_create(co2_bg);
-    lv_obj_set_style_text_font(co2_label, &roboto_extra_bold_72, LV_PART_MAIN);
+    lv_obj_set_style_text_font(co2_label, &roboto_extra_bold_64, LV_PART_MAIN);
     lv_obj_set_style_text_color(co2_label, lv_color_black(), LV_PART_MAIN);
+    lv_obj_set_style_text_align(co2_label , LV_TEXT_ALIGN_CENTER, 0);
     lv_label_set_text(co2_label, "1234");
     lv_obj_center(co2_label);
 

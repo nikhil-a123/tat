@@ -1,7 +1,7 @@
 #include "app_menu_ui.h"
 #include "app_menu.h"
 
-LV_FONT_DECLARE(roboto_semibold_32);
+LV_FONT_DECLARE(roboto_semibold_16);
 
 lv_obj_t *app_menu_ui_create(lv_obj_t *root)
 {
@@ -9,7 +9,7 @@ lv_obj_t *app_menu_ui_create(lv_obj_t *root)
     lv_obj_set_name(menu_ui_root, "app_menu");
     lv_obj_set_size(menu_ui_root, LV_PCT(100), LV_PCT(100));
     lv_obj_set_style_border_width(menu_ui_root, 0, LV_PART_MAIN);
-    lv_obj_set_style_text_font(menu_ui_root, &roboto_semibold_32, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(menu_ui_root, &roboto_semibold_16, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *app_list = lv_list_create(menu_ui_root);
     lv_obj_set_name(app_list, "app_list");

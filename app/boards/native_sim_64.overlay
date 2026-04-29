@@ -59,8 +59,9 @@
     status = "okay";
 };
 
+// Emulates the display of LS013B7DH05 display
 &sdl_dc {
 	compatible = "zephyr,sdl-dc";
-	height = <240>;
-	width = <400>;
+	height = <144>;
+	width = <168>;
 };

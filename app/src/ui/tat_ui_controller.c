@@ -31,7 +31,7 @@
 #include "tat_ui.h"
 
 // Declare external fonts
-LV_FONT_DECLARE(roboto_medium_16);
+LV_FONT_DECLARE(roboto_medium_12);
 
 static void run_input_work(struct k_work *item);
 
@@ -207,7 +207,7 @@ int tat_ui_controller_init(void)
     root_screen = lv_screen_active();
 
     // Set roboto as default text font
-    lv_obj_set_style_text_font(root_screen, &roboto_medium_16, LV_PART_MAIN);
+    lv_obj_set_style_text_font(root_screen, &roboto_medium_12, LV_PART_MAIN);
 
     /* Associate the user input encoder with the widget group */
     enc_indev = lv_indev_create();
