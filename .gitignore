@@ -17,3 +17,6 @@ build*
 # Python stuff
 my-venv
 output
+
+# Emulated flash memory
+flash.bin
