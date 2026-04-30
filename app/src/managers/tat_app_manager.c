@@ -58,10 +58,6 @@ static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
         .name = "Root",
         .category = TAT_APP_CATEGORY_ROOT
     },
-    [TAT_APP_CATEGORY_TOOLS] = {
-        .name = "Tools",
-        .category = TAT_APP_CATEGORY_TOOLS
-    },
     [TAT_APP_CATEGORY_SYSTEM] = {
         .name = "System",
         .category = TAT_APP_CATEGORY_SYSTEM
@@ -69,10 +65,6 @@ static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
     [TAT_APP_CATEGORY_SENSORS] = {
         .name = "Sensors",
         .category = TAT_APP_CATEGORY_SENSORS
-    },
-    [TAT_APP_CATEGORY_GAMES] = {
-        .name = "Games",
-        .category = TAT_APP_CATEGORY_GAMES
     },
     [TAT_APP_CATEGORY_OTHER] = {
         .name = "Other",
