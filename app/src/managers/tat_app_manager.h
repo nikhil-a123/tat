@@ -22,6 +22,8 @@
 
 typedef void(*application_start_fn)(lv_obj_t *root, lv_group_t *group);
 typedef void(*application_stop_fn)(void);
+// Back function should return true if back button is consumed by the application
+typedef bool(*application_back_fn)(void);
 
 typedef void(*on_app_manager_cb_fn)(void);
 
@@ -37,18 +39,18 @@ typedef enum {
 typedef struct {
     const char *name;
     tat_app_category_t category;
-    //const void *icon;
+    const void *icon;
 } tat_app_folder_info_t;
 
 typedef enum {
     TAT_APP_STATE_STOPPED,      // App is not running
     TAT_APP_STATE_UI_VISIBLE,   // App UI is visible and safe to use
-    //TAT_APP_STATE_UI_HIDDEN     // App is running but UI is not safe to call
 } tat_app_state_t;
 
 typedef struct application_t {
     application_start_fn            start_func;
     application_stop_fn             stop_func;
+    application_back_fn             back_func;
     char                            *name;
     const void                      *icon;
     bool                            hidden;
@@ -60,7 +62,7 @@ typedef struct application_t {
 int tat_app_manager_show(on_app_manager_cb_fn close_cb, lv_obj_t *root, lv_group_t *group, char *app_name);
 void tat_app_manager_delete(void);
 void tat_app_manager_add_application(application_t *app);
-void tat_app_manager_exit_app(void);
+void tat_app_manager_back_pressed(void);
 void tat_app_manager_app_close_request(application_t *app);
 int tat_app_manager_get_num_apps(void);
 application_t *tat_app_manager_get_app(int index);

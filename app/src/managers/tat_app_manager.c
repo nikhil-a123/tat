@@ -36,7 +36,7 @@ LOG_MODULE_REGISTER(app_manager, CONFIG_TAT_MANAGERS_LOG_LEVEL);
 //static void draw_app_and_folder_view(void);
 static void on_app_selected(application_t *app);
 static void async_app_start(lv_timer_t *timer);
-static void async_app_close(lv_timer_t *timer);
+static void async_app_back_pressed(lv_timer_t *timer);
 static void draw_app_menu(void);
 
 static application_t *apps[MAX_APPS];
@@ -50,7 +50,7 @@ static on_app_manager_cb_fn close_cb_func;
 static lv_obj_t *app_menu_root;
 static bool app_launch_only;
 static lv_timer_t *async_app_start_timer;
-static lv_timer_t *async_app_close_timer;
+static lv_timer_t *async_app_back_pressed_timer;
 
 // TODO: Add icons for app folders
 static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
@@ -113,20 +113,33 @@ static void async_app_start(lv_timer_t *timer)
     app->start_func(root_obj, group_obj);
 }
 
-static void async_app_close(lv_timer_t *timer)
+static void async_app_back_pressed(lv_timer_t *timer)
 {
     if (current_app < num_apps) {
         LOG_DBG("Stop %d", current_app);
 
-        apps[current_app]->current_state = TAT_APP_STATE_STOPPED;
-        apps[current_app]->stop_func();
-        current_app = INVALID_APP_ID;
-        if (app_launch_only) {
-            // if we skipped the app menu, delete this
-            tat_app_manager_delete();
-        } else {
-            // go back to app menu
-            draw_app_menu();
+        // Back button either directly closes the app
+        // or can be passed to the application i.e going back
+        // in a menu
+        bool back_button_consumed = false;
+        if (apps[current_app]->back_func) {
+            back_button_consumed = apps[current_app]->back_func();
+        }
+
+        if (!back_button_consumed) {
+            // Back button is not consumed, quit app
+            apps[current_app]->current_state = TAT_APP_STATE_STOPPED;
+            apps[current_app]->stop_func();
+            current_app = INVALID_APP_ID;
+
+            if (app_launch_only) {
+                // if we skipped the app menu
+                // delete this and go back to env screen
+                tat_app_manager_delete();
+            } else {
+                // go back to app menu
+                draw_app_menu();
+            }
         }
     } else {
         // No app is running, we are in folder view
@@ -138,7 +151,7 @@ static void async_app_close(lv_timer_t *timer)
         }
     }
 
-    async_app_close_timer = NULL;
+    async_app_back_pressed_timer = NULL;
 }
 
 static void draw_app_menu(void)
@@ -208,14 +221,14 @@ void tat_app_manager_add_application(application_t *app)
     }
 }
 
-void tat_app_manager_exit_app(void)
+void tat_app_manager_back_pressed(void)
 {
     LOG_DBG("Exit app called!");
-    if (async_app_close_timer != NULL) {
+    if (async_app_back_pressed_timer != NULL) {
         return;
     }
-    async_app_close_timer = lv_timer_create(async_app_close, 500,  NULL);
-    lv_timer_set_repeat_count(async_app_close_timer, 1);
+    async_app_back_pressed_timer = lv_timer_create(async_app_back_pressed, 500,  NULL);
+    lv_timer_set_repeat_count(async_app_back_pressed_timer, 1);
 }
 
 void tat_app_manager_app_close_request(application_t *app)

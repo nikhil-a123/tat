@@ -96,7 +96,7 @@ static void run_input_work(struct k_work *item)
                 if (container->event.value == 0) {
                     // Back key was pressed and released
                     if (ui_state == APP_MENU_STATE) {
-                        tat_app_manager_exit_app();
+                        tat_app_manager_back_pressed();
                     }
                     return;
                 }
