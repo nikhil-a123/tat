@@ -1,0 +1,3 @@
+if SENSOR
+rsource "tat_stcc4/Kconfig"
+endif # SENSOR

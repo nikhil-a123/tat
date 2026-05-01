@@ -1,0 +1,22 @@
+menuconfig TAT_STCC4
+    bool "Sensirion STCC4 Sensor"
+    depends on DT_HAS_TAT_STCC4_ENABLED
+    default y
+    select I2C
+    help
+      Enable the driver for the STCC4 CO2 sensor.
+
+if TAT_STCC4
+    config TAT_STCC4_EMUL
+        bool "Emulate a Sensirion STCC4 CO2 sensor"
+        default y
+        depends on EMUL
+        depends on TAT_STCC4
+        help
+          This is an emulator for the Sensirion STCC4 CO2 sensor.
+
+    module = TAT_SENSIRION_STCC4
+    module-str = TAT_SENSIRION_STCC4
+    source "subsys/logging/Kconfig.template.log_config"
+
+endif

@@ -1,0 +1,2 @@
+zephyr_sources_ifdef(CONFIG_TAT_STCC4 tat_sensirion_stcc4.c)
+zephyr_sources_ifdef(CONFIG_TAT_STCC4_EMUL tat_sensirion_stcc4_emul.c)
