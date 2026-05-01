@@ -6,43 +6,41 @@
 
 #include <stdio.h>
 #include <zephyr/kernel.h>
-#include <zephyr/drivers/gpio.h>
+#include <zephyr/device.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/shell/shell.h>
 
-/* 1000 msec = 1 sec */
-#define SLEEP_TIME_MS   1000
+#include "drivers/tat_display_control.h"
+#include "sensors/tat_co2_sensor.h"
+#include "ui/tat_ui_controller.h"
 
-/* The devicetree node identifier for the "led0" alias. */
-#define LED0_NODE DT_ALIAS(led0)
+LOG_MODULE_REGISTER(main);
 
-/*
- * A build error on this line means your board is unsupported.
- * See the sample documentation for information on how to fix this.
- */
-static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+static void run_init_work(struct k_work *item);
+
+K_WORK_DEFINE(init_work, run_init_work);
+
+// The init code requires a bit of stack.
+// So in order to not increase CONFIG_MAIN_STACK_SIZE and loose
+// this RAM forever, instead re-use the system workqueue for init
+// it has the required amount of stack.
+static void run_init_work(struct k_work *item)
+{
+	int ret;
+
+	tat_display_control_init();
+	tat_display_control_sleep_ctrl(true);
+
+	//tat_test_sensor_init();
+	tat_co2_sensor_init();
+
+	tat_ui_controller_init();
+	LOG_INF("tat application started!");
+}
 
 int main(void)
 {
-	int ret;
-	bool led_state = true;
-
-	if (!gpio_is_ready_dt(&led)) {
-		return 0;
-	}
-
-	ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
-	if (ret < 0) {
-		return 0;
-	}
-
-	while (1) {
-		ret = gpio_pin_toggle_dt(&led);
-		if (ret < 0) {
-			return 0;
-		}
-
-		led_state = !led_state;
-		printk("LED state: %s\n", led_state ? "ON" : "OFF");
-		k_msleep(SLEEP_TIME_MS);
-	}
+	k_work_submit(&init_work);
+	
 	return 0;
 }

@@ -1,0 +1,8 @@
+# Using the logging template creates local log level configuration
+# for all the sensors
+
+menu "Sensors"
+    module = TAT_SENSORS
+    module-str = TAT_SENSORS
+    source "subsys/logging/Kconfig.template.log_config"
+endmenu

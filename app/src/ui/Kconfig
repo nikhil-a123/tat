@@ -1,0 +1,7 @@
+menu "UI"
+    menu "UI Controller"
+        module = TAT_UI
+        module-str = TAT_UI
+        source "subsys/logging/Kconfig.template.log_config"
+    endmenu
+endmenu

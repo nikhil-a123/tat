@@ -1,0 +1,7 @@
+# Using the logging template creates local log level configuration
+
+menu "Managers"
+    module = TAT_MANAGERS
+    module-str = TAT_MANAGERS
+    source "subsys/logging/Kconfig.template.log_config"
+endmenu
