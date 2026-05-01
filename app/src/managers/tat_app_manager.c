@@ -30,6 +30,8 @@
 
 LOG_MODULE_REGISTER(app_manager, CONFIG_TAT_MANAGERS_LOG_LEVEL);
 
+LV_IMAGE_DECLARE(material_icons_settings_20_black);
+
 #define MAX_APPS        32
 #define INVALID_APP_ID  0xFF
 
@@ -56,19 +58,23 @@ static lv_timer_t *async_app_back_pressed_timer;
 static const tat_app_folder_info_t app_folders[TAT_APP_CATEGORY_NUM_OF] = {
     [TAT_APP_CATEGORY_ROOT] = {
         .name = "Root",
-        .category = TAT_APP_CATEGORY_ROOT
+        .category = TAT_APP_CATEGORY_ROOT,
+        .icon = &material_icons_settings_20_black
     },
     [TAT_APP_CATEGORY_SYSTEM] = {
         .name = "System",
-        .category = TAT_APP_CATEGORY_SYSTEM
+        .category = TAT_APP_CATEGORY_SYSTEM,
+        .icon = &material_icons_settings_20_black
     },
     [TAT_APP_CATEGORY_SENSORS] = {
         .name = "Sensors",
-        .category = TAT_APP_CATEGORY_SENSORS
+        .category = TAT_APP_CATEGORY_SENSORS,
+        .icon = &material_icons_settings_20_black
     },
     [TAT_APP_CATEGORY_OTHER] = {
         .name = "Other",
-        .category = TAT_APP_CATEGORY_OTHER
+        .category = TAT_APP_CATEGORY_OTHER,
+        .icon = &material_icons_settings_20_black
     },
 };
 
@@ -157,7 +163,7 @@ static void async_app_back_pressed(lv_timer_t *timer)
 static void draw_app_menu(void)
 {
     /* Use new circular app picker UI */
-    app_menu_root = app_menu_create(root_obj, group_obj, on_app_selected);
+    app_menu_root = app_menu_create(root_obj, group_obj, on_app_selected, app_folders);
 
     LOG_DBG("Created app menu UI");
 }
@@ -234,7 +240,7 @@ void tat_app_manager_back_pressed(void)
 void tat_app_manager_app_close_request(application_t *app)
 {
     LOG_DBG("tat_app_manager_app_close_request");
-    tat_app_manager_exit_app();
+    tat_app_manager_back_pressed();
 }
 
 int tat_app_manager_get_num_apps(void)

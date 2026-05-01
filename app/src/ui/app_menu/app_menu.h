@@ -11,7 +11,8 @@ typedef void (*app_menu_on_app_selected_cb)(application_t *app);
 typedef void (*app_menu_on_close_cb)(void);
 
 lv_obj_t *app_menu_create(lv_obj_t *root, lv_group_t *group,
-                          app_menu_on_app_selected_cb on_app_selected);
+                          app_menu_on_app_selected_cb on_app_selected,
+                          const tat_app_folder_info_t *folders);
 
 void app_menu_delete(void);
 
