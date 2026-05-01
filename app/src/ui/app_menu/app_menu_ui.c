@@ -19,38 +19,38 @@ lv_obj_t *app_menu_ui_create(lv_obj_t *root)
     // Create 6 buttons in the list
     lv_obj_t *button0 = lv_list_add_button(app_list, NULL, NULL);
     lv_obj_set_name(button0, "button0");
-    lv_obj_t *icon0 = lv_image_create(button0);
-    lv_obj_t *label0 = lv_label_create(button0);
+    lv_image_create(button0);
+    lv_label_create(button0);
     lv_obj_add_event_cb(button0, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button1 = lv_list_add_button(app_list, NULL, NULL);
     lv_obj_set_name(button1, "button1");
-    lv_obj_t *icon1 = lv_image_create(button1);
-    lv_obj_t *label1 = lv_label_create(button1);
+    lv_image_create(button1);
+    lv_label_create(button1);
     lv_obj_add_event_cb(button1, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button2 = lv_list_add_button(app_list, NULL, NULL);
     lv_obj_set_name(button2, "button2");
-    lv_obj_t *icon2 = lv_image_create(button2);
-    lv_obj_t *label2 = lv_label_create(button2);
+    lv_image_create(button2);
+    lv_label_create(button2);
     lv_obj_add_event_cb(button2, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button3 = lv_list_add_button(app_list, NULL, NULL);
     lv_obj_set_name(button3, "button3");
-    lv_obj_t *icon3 = lv_image_create(button3);
-    lv_obj_t *label3 = lv_label_create(button3);
+    lv_image_create(button3);
+    lv_label_create(button3);
     lv_obj_add_event_cb(button3, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button4 = lv_list_add_button(app_list, NULL, NULL);
     lv_obj_set_name(button4, "button4");
-    lv_obj_t *icon4 = lv_image_create(button4);
-    lv_obj_t *label4 = lv_label_create(button4);
+    lv_image_create(button4);
+    lv_label_create(button4);
     lv_obj_add_event_cb(button4, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_t *button5 = lv_list_add_button(app_list, NULL, NULL);
     lv_obj_set_name(button5, "button5");
-    lv_obj_t *icon5 = lv_image_create(button5);
-    lv_obj_t *label5 = lv_label_create(button5);
+    lv_image_create(button5);
+    lv_label_create(button5);
     lv_obj_add_event_cb(button5, app_menu_on_app_clicked, LV_EVENT_SINGLE_CLICKED, NULL);
 
     lv_obj_update_layout(menu_ui_root);

@@ -238,7 +238,7 @@ void app_menu_on_app_clicked(lv_event_t *e)
     lv_obj_t *target = lv_event_get_target(e);
     int button_index = (int)(intptr_t)lv_obj_get_user_data(target);
 
-    if (button_index < 0 || button_index >= NUM_SLOTS || button_items[button_index].type == TAT_APP_CATEGORY_INVALID) {
+    if (button_index < 0 || button_index >= NUM_SLOTS || button_items[button_index].type == MENU_ITEM_INVALID) {
         LOG_WRN("Click on invalid/empty button %d", button_index);
         return;
     }
