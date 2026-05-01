@@ -18,4 +18,8 @@ void app_menu_delete(void);
 
 void app_menu_on_app_clicked(lv_event_t *e);
 
+bool app_menu_is_folder_open(void);
+
+void app_menu_close_folder(void);
+
 #endif /* APP_MENU_H_ */

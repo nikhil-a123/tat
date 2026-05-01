@@ -148,10 +148,14 @@ static void async_app_back_pressed(lv_timer_t *timer)
             }
         }
     } else {
-        // No app is running, we are in folder view
-        // Close the folder view and go back to enviromental
-        // data screen
-        if (app_menu_root != NULL) {
+        // No app is running, we are in the app menu
+        // If in folder, go back to root menu
+        if (app_menu_root != NULL && app_menu_is_folder_open()) {
+            LOG_DBG("Close app menu folder");
+            app_menu_close_folder();
+        } else {
+            // Exit the app menu
+            LOG_DBG("Exit app menu");
             tat_app_manager_delete();
             close_cb_func();
         }

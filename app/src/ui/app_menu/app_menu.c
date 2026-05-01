@@ -43,9 +43,6 @@ static lv_obj_t *list_buttons[NUM_SLOTS];
 static lv_obj_t *list_icons[NUM_SLOTS];
 static lv_obj_t *list_labels[NUM_SLOTS];
 
-//static menu_item_t menu_items[MAX_MENU_ITEMS];
-//static int num_menu_items;
-
 static menu_item_t button_items[NUM_SLOTS];
 
 static tat_app_category_t open_folder = TAT_APP_CATEGORY_INVALID;
@@ -171,6 +168,7 @@ static void draw_apps_in_folder(tat_app_category_t category)
 {
     int button_index = 0;
     int num_apps = tat_app_manager_get_num_apps();
+    open_folder = category;
 
     // Clear the button items
     memset(button_items, 0, sizeof(button_items));
@@ -229,8 +227,25 @@ void app_menu_delete(void)
     memset(list_buttons, 0, sizeof(list_buttons));
     memset(list_labels, 0, sizeof(list_labels));
     memset(button_items, 0, sizeof(button_items));
-
+    open_folder = TAT_APP_CATEGORY_INVALID;
     app_selected_cb = NULL;
+}
+
+bool app_menu_is_folder_open(void)
+{
+    return open_folder != TAT_APP_CATEGORY_INVALID;
+}
+
+void app_menu_close_folder(void)
+{
+    if (open_folder != TAT_APP_CATEGORY_INVALID) {
+        LOG_DBG("Closing folder via back button");
+
+        open_folder = TAT_APP_CATEGORY_INVALID;
+        last_folder = TAT_APP_CATEGORY_INVALID;
+
+        draw_root_app_menu();
+    }
 }
 
 void app_menu_on_app_clicked(lv_event_t *e)
@@ -243,7 +258,6 @@ void app_menu_on_app_clicked(lv_event_t *e)
         return;
     }
 
-    //menu_item_t *item = button_items[button_index];
     if (button_items[button_index].type == MENU_ITEM_APP) {
         LOG_DBG("App clicked: %s (slot %d)", button_items[button_index].app->name, button_index);
         if (app_selected_cb) {
