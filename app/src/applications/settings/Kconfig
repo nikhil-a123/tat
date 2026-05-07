@@ -1,0 +1,6 @@
+
+menu "Settings"
+    module = TAT_SETTINGS_APP
+    module-str = TAT_SETTINGS_APP
+    source "subsys/logging/Kconfig.template.log_config"
+endmenu

@@ -4,4 +4,6 @@ menu "Applications"
     module = TAT_APPLICATIONS
     module-str = TAT_APPLICATIONS
     source "subsys/logging/Kconfig.template.log_config"
+
+    rsource "settings/Kconfig"
 endmenu
