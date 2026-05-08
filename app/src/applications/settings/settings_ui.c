@@ -26,26 +26,17 @@ static void close_button_pressed(lv_event_t *e)
     }
 }
 
-enum {
-    LV_MENU_ITEM_BUILDER_VARIANT_1,
-    LV_MENU_ITEM_BUILDER_VARIANT_2
-};
-typedef uint8_t lv_menu_builder_variant_t;
-
-static lv_obj_t *create_text(lv_obj_t *parent, const char *txt,
-                             lv_menu_builder_variant_t builder_variant);
+static lv_obj_t *create_text(lv_obj_t *parent, const char *txt);
 static lv_obj_t *create_slider(lv_obj_t *parent, const char *txt, int32_t min, int32_t max, int32_t val);
 static lv_obj_t *create_switch(lv_obj_t *parent, const char *txt, bool chk);
 
 static void slider_event_cb(lv_event_t *e);
 
-static lv_obj_t *create_text(lv_obj_t *parent, const char *txt,
-                             lv_menu_builder_variant_t builder_variant)
+static lv_obj_t *create_text(lv_obj_t *parent, const char *txt)
 {
     lv_obj_t *obj = lv_menu_cont_create(parent);
     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
 
-    lv_obj_t *img = NULL;
     lv_obj_t *label = NULL;
 
     if (txt) {
@@ -55,18 +46,12 @@ static lv_obj_t *create_text(lv_obj_t *parent, const char *txt,
         lv_obj_set_flex_grow(label, 1);
     }
 
-    //if (builder_variant == LV_MENU_ITEM_BUILDER_VARIANT_2 && icon && txt) {
-    if (builder_variant == LV_MENU_ITEM_BUILDER_VARIANT_2 && txt) {
-        lv_obj_add_flag(img, LV_OBJ_FLAG_FLEX_IN_NEW_TRACK);
-        //lv_obj_swap(img, label);
-    }
-
     return obj;
 }
 
 static lv_obj_t *create_switch(lv_obj_t *parent, const char *txt, bool chk)
 {
-    lv_obj_t *obj = create_text(parent, txt, LV_MENU_ITEM_BUILDER_VARIANT_1);
+    lv_obj_t *obj = create_text(parent, txt);
     lv_obj_t *sw = lv_switch_create(obj);
     lv_obj_add_state(sw, chk ? LV_STATE_CHECKED : 0);
 
@@ -76,7 +61,7 @@ static lv_obj_t *create_switch(lv_obj_t *parent, const char *txt, bool chk)
 static lv_obj_t *create_slider(lv_obj_t *parent, const char *txt, int32_t min, int32_t max,
                                int32_t val)
 {
-    lv_obj_t *obj = create_text(parent, txt, LV_MENU_ITEM_BUILDER_VARIANT_2);
+    lv_obj_t *obj = create_text(parent, txt);
 
     lv_obj_t *slider = lv_slider_create(obj);
     lv_obj_set_flex_grow(slider, 1);
@@ -134,7 +119,7 @@ void lv_settings_create(lv_obj_t *root, lv_settings_page_t *pages, uint8_t num_p
     static lv_style_t outline_primary;
 
     // Border around selected menu row when focused
-    lv_style_init(&outline_primary);
+    //lv_style_init(&outline_primary);
     //lv_style_set_border_color(&outline_primary, lv_color_hex(0xF99B7D));
     //lv_style_set_border_width(&outline_primary, lv_display_dpx(lv_display_get_next(NULL), 3));
     //lv_style_set_border_opa(&outline_primary, LV_OPA_50);
@@ -147,8 +132,10 @@ void lv_settings_create(lv_obj_t *root, lv_settings_page_t *pages, uint8_t num_p
     // Draw menu screen
     _menu = lv_menu_create(root);
     lv_obj_add_event_cb(_menu, close_button_pressed, LV_EVENT_CLICKED, _menu);
-    lv_obj_set_size(_menu, LV_PCT(100), LV_PCT(90));
+    lv_obj_set_size(_menu, LV_PCT(100), LV_PCT(100));
     lv_obj_set_pos(_menu, 0, 0);
+    //lv_obj_set_style_pad_hor(_menu, LV_PCT(10), 0);
+    //lv_obj_set_style_pad_ver(_menu, LV_PCT(10), 0);
     lv_obj_set_style_pad_top(_menu, 25, LV_PART_MAIN);
     lv_obj_set_style_pad_left(_menu, 20, LV_PART_MAIN);
     //lv_obj_set_style_bg_opa(_menu, LV_OPA_TRANSP, LV_PART_MAIN);
@@ -164,6 +151,8 @@ void lv_settings_create(lv_obj_t *root, lv_settings_page_t *pages, uint8_t num_p
     for (int i = 0; i < num_pages; i++) {
         sub_page = lv_menu_page_create(_menu, NULL);
         lv_obj_set_scrollbar_mode(sub_page, LV_SCROLLBAR_MODE_OFF);
+        //lv_obj_set_style_pad_hor(sub_page, LV_PCT(10), 0);
+        //lv_obj_set_style_pad_ver(sub_page, LV_PCT(10), 0);
 
         for (int j = 0; j < pages[i].num_items; j++) {
             item = &pages[i].items[j];
@@ -183,7 +172,7 @@ void lv_settings_create(lv_obj_t *root, lv_settings_page_t *pages, uint8_t num_p
         }
         // Create a main page item
         cont = lv_menu_cont_create(_mainPage);
-        lv_obj_add_style(cont, &outline_primary, LV_STATE_FOCUS_KEY);
+        //lv_obj_add_style(cont, &outline_primary, LV_STATE_FOCUS_KEY);
         label = lv_label_create(cont);
         lv_obj_set_style_text_font(label, &roboto_medium_12, LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_label_set_text(label, pages[i].name);
